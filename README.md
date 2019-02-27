@@ -1,7 +1,7 @@
 node-red.github.io
 ==================
 
-[Node-RED Site](http://nodered.org)
+[Node-RED Japanese Site](https://nodered.jp)
 
 ### Contributing / Fixes
 
