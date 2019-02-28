@@ -11,7 +11,7 @@ using the capabilities of the platform.
 
 
 If you're interested in contributing to the cookbook you are more than welcome.
-Join the `#docs` channel on [slack](https://nodered.org/slack) and get involved.
+Join the `#docs` channel on [slack](https://nodered.jp/slack) and get involved.
 
 
 ## Table of Contents
