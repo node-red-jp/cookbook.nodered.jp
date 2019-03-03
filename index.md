@@ -3,16 +3,13 @@ layout: default
 title: Node-RED Cookbook
 ---
 
-This is a collection of recipes for how to use Node-RED to solve many common
-programming tasks.
+どのようにNode-REDを使用して、よくあるプログラミング上の課題を解決するかのレシピ集です。
 
-Each recipe addresses a specific problem and shows by example how it can be solved
-using the capabilities of the platform.
+それぞれのレシピはそれぞれの特定の問題に対応しており、
+プラットフォームの機能を使用して、どのように解決するかの例を示しています。
 
-
-If you're interested in contributing to the cookbook you are more than welcome.
-Join the `#docs` channel on [slack](https://nodered.jp/slack) and get involved.
-
+Cookbookへの貢献に興味がある方も大歓迎です。
+[slack](https://nodered.jp/slack) の `#docs` チャンネルに参加して関係を深めましょう。
 
 ## Table of Contents
 
