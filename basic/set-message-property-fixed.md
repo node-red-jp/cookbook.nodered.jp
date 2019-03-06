@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Set a message property to a fixed value
+title: 固定値をmesssageプロパティにセット
 ---
 
-### Problem
+### 課題
 
-You want to set a message property to a fixed value.
+固定値をmesssageプロパティにセットしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">Change</code> node to set the property of the message.
+<code class="node">Change</code> ノードを使用してmesssageのプロパティにセットする。
 
-#### Example
+#### 例
 
 ![](/images/basic/copy-message-property.png){:width="616px"}
 
@@ -22,18 +22,17 @@ Use the <code class="node">Change</code> node to set the property of the message
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Change</code> node can be used to set properties of a message.
+<code class="node">Change</code> ノードは、messageのプロパティをセットするために使用します。
 
-The node supports setting various JavaScript types as well as some Node-RED specific types.
+このノードは、さまざまなJavaScriptの型と、いくつかのNode-RED固有の型へのセットをサポートしています。
 
- - strings: `"hello world"`
+ - string: `"hello world"`
  - numbers: `42`
  - boolean: `true`/`false`
- - timestamp: the current time, in milliseconds, since epoch (January 1st, 1970)
- - JSON: a JSON string that will be parsed to its Object representation
- - Buffer: a Node.js Buffer object
+ - timestamp: エポック(1970年1月1日)から現在日時までのミリ秒
+ - JSON: オブジェクトとして変換可能なJSON文字列
+ - Buffer: Node.jsのBufferオブジェクト
 
-It also supports setting a property to a value based on the value of context properties,
-other message properties or a JSONata expression.
+コンテキストのプロパティ値や、他のmesssageプロパティや、JSONata式でのセットもサポートしています。
