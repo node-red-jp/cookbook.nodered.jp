@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Delete a message property
+title: messageプロパティを削除
 ---
 
-### Problem
+### 課題
 
-You want to delete a message property.
+messageプロパティを削除したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">Change</code> node to delete the property.
+<code class="node">Change</code> ノードを使用してプロパティを削除します。
 
-#### Example
+#### 例
 
 ![](/images/basic/delete-message-property.png){:width="616px"}
 
@@ -22,6 +22,6 @@ Use the <code class="node">Change</code> node to delete the property.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Change</code> node can be used to delete properties of a message.
+<code class="node">Change</code> ノードはmessageプロパティの削除にも使用できます。
