@@ -2,7 +2,7 @@
 
 - [固定値をmessageプロパティにセット](/basic/set-message-property-fixed)
 - [messageプロパティを削除](/basic/delete-message-property)
-- [Move a message property](/basic/move-message-property)
+- [messsageプロパティの移動](/basic/move-message-property)
 - [Map a property between different numeric ranges](/basic/map-between-different-number-ranges)
 
 
