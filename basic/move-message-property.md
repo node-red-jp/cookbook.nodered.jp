@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Move a message property
+title: messsageプロパティの移動
 ---
 
-### Problem
+### 課題
 
-You want to move a message property to a different property.
+messsageプロパティを別のプロパティに移動させたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">Change</code> node to move a property.
+<code class="node">Change</code> ノードを使用してプロパティを移動させます。
 
-#### Example
+#### 例
 
 ![](/images/basic/move-message-property.png){:width="616px"}
 
@@ -22,12 +22,12 @@ Use the <code class="node">Change</code> node to move a property.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Change</code> node can be used to move a property of a message.
+<code class="node">Change</code> ノードはmessageプロパティを移動させるために使用できます。
 
-It can be done as two separate actions in the <code class="node">Change</code> node;
-first using a Set action to copy the property to its new location and then a Delete
-action to remove the original.
+Changeノード内では別々の2つのアクションとしても実行できます。
+まず、セットの動作を使用し新しい場所にプロパティをコピーします。
+そして、削除の動作で元の値を削除します。
 
-Alternatively, the node supports a Move action that does it in one step.
+あるいは、このノードは1ステップで移動をサポートしています。
