@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Map a property between different numeric ranges
+title: 異なる範囲の数値をマッピングする
 ---
 
-### Problem
+### 課題
 
-You want to scale a number from one numeric range to another. For example, a
-sensor reading in the range 0 - 1023 should be mapped to a voltage range of 0 - 5.
+ある範囲の数値をスケールさせたい。
+たとえば、センサー値が0〜1023の範囲で取得できるものに対して、電圧として0〜5にマッピングするなど。
 
-### Solution
+### 解決
 
-Use the <code class="node">Range</code> node to map between the defined ranges.
+<code class="node">Range</code> ノードを使用して、定義した範囲にマッピングします。
 
 #### Example
 
@@ -23,13 +23,12 @@ Use the <code class="node">Range</code> node to map between the defined ranges.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Range</code> node can be used to linearly scale between two
-different numberic ranges.
+<code class="node">Range</code> ノードは指定した2つの値の範囲内を直線的にスケールさせるために使用します。
 
-By default, the result is not constrained to the range defined in the node. This means
-using the voltage example above, a value of 2046 would map to a result of 10.
+デフォルトでは、結果はノードで定義された範囲に制限されません。
+上記の電圧の例でいうと、2046は10にマッピングされます。
 
-The node can be configured to constrain the result to the target range, or apply simple
-modulo arithmetic so the value wraps within the target range.
+このノードはターゲットとする値の範囲を設定することもできますし、
+シンプルな合同算術を適用して範囲におさめることもできます。
