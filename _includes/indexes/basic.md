@@ -3,8 +3,7 @@
 - [固定値をmessageプロパティにセット](/basic/set-message-property-fixed)
 - [messageプロパティを削除](/basic/delete-message-property)
 - [messsageプロパティの移動](/basic/move-message-property)
-- [Map a property between different numeric ranges](/basic/map-between-different-number-ranges)
-
+- [異なる範囲の数値をマッピングする](/basic/map-between-different-number-ranges)
 
 #### Flow control
 
