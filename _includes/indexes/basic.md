@@ -7,7 +7,7 @@
 
 #### Flow control
 
-- [Trigger a flow whenever Node-RED starts](/basic/trigger-on-start)
+- [Node-RED起動の度にフローを実行](/basic/trigger-on-start)
 - [Trigger a flow at regular intervals](/basic/trigger-at-interval)
 - [Trigger a flow at a specific time](/basic/trigger-at-time)
 - [Route a message based on one of its properties](/basic/route-on-property)

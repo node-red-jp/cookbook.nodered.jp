@@ -1,20 +1,19 @@
 ---
 layout: default
-title: Trigger a flow whenever Node-RED starts
+title: Node-RED起動の度にフローを実行
 ---
 
-### Problem
+### 課題
 
-You want to trigger a flow whenever Node-RED starts.
+Node-REDが起動の度にフローを実行したい。
 
-This could be used to initialise context variables, or to send a notification
-that Node-RED has been restarted.
+これは、コンテキスト変数を初期化したり、Node-REDが再起動されたという通知を送るためにも使われます。
 
-### Solution
+### 解決
 
-Use an <code class="node">Inject</code> node configured to fire once on start.
+起動時に1回実行するよう設定された <code class="node">Inject</code> ノードを使用します。
 
-#### Example
+#### 例
 
 ![](/images/basic/trigger-on-start.png){:width="530px"}
 
@@ -25,11 +24,10 @@ Use an <code class="node">Inject</code> node configured to fire once on start.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-When configured to fire on start, the <code class="node">Inject</code> node will
-be automatically triggered a few hundred milliseconds after it is deployed. This
-delay is used to help ensure the rest of the flows have been created and Started
-by this point.
+起動時に実行されるよう設定すると、<code class="node">Inject</code> ノードは
+デプロイ後、数百ミリ秒後に自動的に実行されます。
+この数百ミリ秒の遅延は、この時点までに残りのフローが作成され開始されるために使用されます。
 
-The node will trigger whenever it is deployed.
+このノードはデプロイされるたびに実行されます。
