@@ -9,7 +9,7 @@
 
 - [Node-RED起動の度にフローを実行](/basic/trigger-on-start)
 - [定期的にフローを実行](/basic/trigger-at-interval)
-- [Trigger a flow at a specific time](/basic/trigger-at-time)
+- [指定の時間にフローを実行](/basic/trigger-at-time)
 - [Route a message based on one of its properties](/basic/route-on-property)
 - [Route a message based on a context value](/basic/route-on-context)
 - [Perform an operation on each element in an array](/basic/operate-on-array)
