@@ -1,19 +1,18 @@
 ---
 layout: default
-title: Trigger a flow at regular intervals
+title: 定期的にフローを実行
 ---
 
-### Problem
+### 課題
 
-You want to trigger a flow at regular intervals. For example, to periodically
-call an api to retrieve its current state.
+定期的にフローを実行したい。
+たとえば、定期的にAPIを呼び出して現在の状態を取得するなどです。
 
-### Solution
+### 解決
 
-Use an <code class="node">Inject</code> node configured to repeat at the desired
-interval.
+繰り返し間隔を設定した <code class="node">Inject</code> ノードを使用します。
 
-#### Example
+#### 例
 
 ![](/images/basic/trigger-at-interval.png){:width="530px"}
 
@@ -26,6 +25,5 @@ interval.
 
 ### Discussion
 
-The <code class="node">Inject</code> node can be configured to repeat at a fixed
-interval. If desired, it can also be constrained to do so between certain times on
-certain days.
+<code class="node">Inject</code> ノードは固定の間隔で繰り返すよう設定されています。
+必要に応じて、特定の日の特定の時間の範囲内で実行するよう制限することもできます。
