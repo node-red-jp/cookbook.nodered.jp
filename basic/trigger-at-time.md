@@ -1,18 +1,17 @@
 ---
 layout: default
-title: Trigger a flow at a specific time
+title: 指定の時間にフローを実行
 ---
 
-### Problem
+### 課題
 
-You want to trigger a flow at a specific time, such as at 4pm every weekday.
+たとえば、毎週平日の午後4時、のような指定の時間にフローを実行したい。
 
-### Solution
+### 解決
 
-Use an <code class="node">Inject</code> node configured to trigger at the desired
-time.
+指定した日時を設定した <code class="node">Inject</code> ノードを使用します。
 
-#### Example
+#### 例
 
 ![](/images/basic/trigger-at-time.png){:width="530px"}
 
@@ -23,10 +22,7 @@ time.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Inject</code> node can be configured to trigger at a specific
-time on specific days of the week.
-
-If multiple different times are required, multiple <code class="node">Inject</code>
-nodes should be used.
+<code class="node">Inject</code> ノードは指定の時間の指定の曜日に実行するよう設定できます。
+複数の時間指定が必要な場合は、複数の <code class="node">Inject</code> ノードを使用します。
