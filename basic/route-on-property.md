@@ -1,21 +1,20 @@
 ---
 layout: default
-title: Route a message based on one of its properties
+title: メッセージをプロパティによってルーティングする
 ---
 
-### Problem
+### 課題
 
-You want to route a message to different flows according to the value of the
-`msg.topic` property. For example, you have an <code class="node">MQTT</code> node
-subscribed to multiple sensors and you want to pass the messages to different
-Dashboard <code class="node">ui_gauge</code> nodes.
+`msg.topic` プロパティ値によって、メッセージを異なるフローにルーティングしたい。
+たとえば、複数のセンサーをsubscribeしている <code class="node">MQTT</code> ノードが存在し、
+異なるダッシュボードの <code class="node">ui_gauge</code> ノードに渡したい場合など。
 
-### Solution
+### 解決
 
-Use the <code class="node">Switch</code> node to check the value of the property
-against different values corresponding to different outputs of the node.
+<code class="node">Switch</code> ノードを使用して
+さまざまな入力を異なる出力に対応させるようプロパティの値をチェックします。
 
-#### Example
+#### 例
 
 ![](/images/basic/route-on-property.png){:width="601px"}
 
@@ -26,10 +25,8 @@ against different values corresponding to different outputs of the node.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Switch</code> node will send on messages it receives on the
-outputs that corresponding to rules that match.
+<code class="node">Switch</code> ノードは、受信したメッセージを一致したルールへ対応する出力に送信します。
 
-It can be configured to send on all rules that match, or only on the first one that
-matches.
+一致するすべてのルール、または、最初に一致したルールのみへ送信するかを設定できます。
