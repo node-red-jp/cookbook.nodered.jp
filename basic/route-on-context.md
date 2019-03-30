@@ -1,19 +1,18 @@
 ---
 layout: default
-title: Route a message based on a context value
+title: メッセージをコンテキストの値によってルーティングする
 ---
 
-### Problem
+### 課題
 
-You want to route a message to different flows according to the current value
-of a flow context property.
+フローコンテキストの現在の値によって、メッセージをルーティングしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">Switch</code> node to check the value of a flow context
-property against different values corresponding to different outputs of the node.
+<code class="node">Switch</code> ノードを使用して、
+さまざまな入力を異なる出力に対応させるようフローコンテキストのプロパティ値をチェックします。
 
-#### Example
+#### 例
 
 ![](/images/basic/route-on-context.png){:width="643px"}
 
@@ -24,12 +23,12 @@ property against different values corresponding to different outputs of the node
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example flow, the top flow represents the stream of messages that need to be
-routed to one of the three outputs by the <code class="node">Switch</code> node.
+この例において、上のフローは <code class="node">Switch</code> ノードによって、
+3つの出力うちの1つにルーティングされる必要があるメッセージのストリームを表しています。
 
-The bottom flow provides a set of <code class="node">Inject</code> nodes to change
-the current value of the `flow.state` context property.
+下のフローでは、コンテキストプロパティの `flow.state` へ値をセットするための
+<code class="node">Inject</code> ノードです。
 
-This shows how the routing in one flow can be changed by a separate flow.
+これは、1つのフロー内のルーティングが、どのように他のフローによって変更されるかを示しています。
