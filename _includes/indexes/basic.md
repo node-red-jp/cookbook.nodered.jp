@@ -12,7 +12,7 @@
 - [指定の時間にフローを実行](/basic/trigger-at-time)
 - [メッセージをプロパティによってルーティングする](/basic/route-on-property)
 - [メッセージをコンテキストの値によってルーティングする](/basic/route-on-context)
-- [Perform an operation on each element in an array](/basic/operate-on-array)
+- [配列内の各要素に対して操作を実行](/basic/operate-on-array)
 - [Trigger a flow if a message isn't received after a defined time](/basic/trigger-timeout)
 - [Send placeholder messages when a stream stops sending](/basic/trigger-placeholder)
 - [Slow down messages passing through a flow](/basic/rate-limit-messages)
