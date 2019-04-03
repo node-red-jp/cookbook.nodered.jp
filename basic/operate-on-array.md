@@ -1,21 +1,20 @@
 ---
 layout: default
-title: Perform an operation on each element in an array
+title: 配列内の各要素に対して操作を実行
 ---
 
-### Problem
+### 課題
 
-You want to perform an operation on every element in an array. For example,
-given an array of numbers, you want to round each value to the nearest integer.
+配列内の各要素に対して操作を実行したい。
+たとえば、与えられた数値の配列を整数の近似値に丸めたい場合などです。
 
-### Solution
+### 解決
 
-The <code class="node">Split</code> node can be used to send a message for every
-element in the array. It can be followed by the nodes needed to operate on the
-individual elements, followed by a <code class="node">Join</code> node to recombine
-them back into a single array.
+<code class="node">Split</code> ノードは配列の各要素を送信するために使用します。
+これに個々の要素に対して必要な操作を行うノードが続き、
+その後 <code class="node">Join</code> ノードによって、単一の配列に再結合します。
 
-#### Example
+#### 例
 
 ![](/images/basic/operate-on-array.png){:width="645px"}
 
@@ -26,16 +25,15 @@ them back into a single array.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In other programming environments, this task would be accomplished by creating a loop
-over the elements of the array.
+その他のプログラミング環境では、このタスクは配列の各要素でループすることによって実現されます。
 
-In Node-RED, the way to achieve the same thing is to turn the single message containing
-the array into a stream of messages that can be processed individually and finally
-recombine them back into one message.
+Node-REDで同じようなことをする場合の方法としては、
+配列を含む単一のメッセージを個別に処理するメッセージのストリームに変換し、
+最後にひとつのメッセージに再結合して返します。
 
-The <code class="node">Split</code>/<code class="node">Join</code> node pair are
-commonly used together to achieve this. The <code class="node">Split</code> node
-adds the `msg.parts` property to each message in the stream which allows the
-<code class="node">Join</code> node to properly reassemble the original message.
+<code class="node">Split</code>/<code class="node">Join</code> ノードのペアは、
+一般的にはこれらを行うために一緒に使用されます。
+<code class="node">Split</code> ノードは、ストリーム内の各メッセージに `msg.parts` プロパティを追加し、
+<code class="node">Join</code> ノードは、元のメッセージを再構築します。
