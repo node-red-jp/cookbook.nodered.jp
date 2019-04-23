@@ -1,20 +1,19 @@
 ---
 layout: default
-title: Trigger a flow if a message isn’t received after a defined time
+title: 設定した時間内でメッセージの受信がなければフローを実行
 ---
 
-### Problem
+### 課題
 
-You want a flow to be triggered if a message is not received after a defined time.
-For example, you expect to receive a sensor reading every 5 seconds and need to know
-if it fails to arrive.
+設定した時間内にメッセージを受信しなかったらフローを実行したい。
+たとえば、5秒ごとに読み取っているセンサー値の受信に失敗したら、それを知りたい場合などです。
 
-### Solution
+### 解決
 
-Use the <code class="node">Trigger</code> node to detect when a message has not
-arrived after a defined interval.
+<code class="node">Trigger</code> ノードを使用して、
+定義した時間の間隔にメッセージを受信していないことを検出します。
 
-#### Example
+#### 例
 
 ![](/images/basic/trigger-timeout.png){:width="555px"}
 
@@ -25,14 +24,13 @@ arrived after a defined interval.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example flow, the top branch represents the normal flow of the messages.
-They also get passed to the <code class="node">Trigger</code> node on a second
-branch of the flow.
+例のフローでは、上部のブランチで通常のメッセージのフローを示しています。
+また2つめのブランチとして、<code class="node">Trigger</code> ノードにも渡されています。
 
-The <code class="node">Trigger</code> node is configured to initially send nothing,
-then to wait for 5 seconds before sending a `"timeout"` message. The option to
-extend the delay if new messages arrive is also selected. This means as long as
-messages continue to arrive, the node will not do anything. Once 5 seconds passes
-after the last message to arrive, it will send on the `"timeout"` message.
+<code class="node">Trigger</code> は、最初は何も送信せず、
+5秒待って `"timeout"` メッセージを送信するよう設定されています。
+新しいメッセージを受信した場合、この遅延を延長するオプションも選択されています。
+つまり、メッセージを継続的に受信し続ける限り、ノードは何もしないということです。
+最後のメッセージ受信から5秒を経過すると、一度だけ `"timeout"` メッセージを送信します。
