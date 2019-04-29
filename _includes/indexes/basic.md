@@ -14,7 +14,7 @@
 - [メッセージをコンテキストの値によってルーティングする](/basic/route-on-context)
 - [配列内の各要素に対して操作を実行](/basic/operate-on-array)
 - [設定した時間内でメッセージの受信がなければフローを実行](/basic/trigger-timeout)
-- [Send placeholder messages when a stream stops sending](/basic/trigger-placeholder)
+- [ストリームの送信が止まった際にプレースホルダーメッセージを送信](/basic/trigger-placeholder)
 - [Slow down messages passing through a flow](/basic/rate-limit-messages)
 - [Handle messages at a regular rate](/basic/rate-limit-message-stream)
 - [Drop messages that have not changed value](/basic/report-by-exception)

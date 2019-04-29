@@ -1,25 +1,23 @@
 ---
 layout: default
-title: Send placeholder messages when a stream stops sending
+title: ストリームの送信が止まった際にプレースホルダーメッセージを送信
 ---
 
-### Problem
+### 課題
 
-You have a stream of messages coming from a sensor at regular intervals. If the
-sensor stops sending messages, you want to send placeholder messages at the same
-rate.
+定期的にセンサー値をストリームで受信しているとします。
+センサーからのメッセージ送信が止まった際に、同じ間隔でプレースホルダーとなる値を送信したいとします。
 
-For example, the sensor data may be feeding a Dashboard chart. If the sensor
-stops sending, the chart will stop updating. So placeholder messages are needed
-for the chart to update with a `0` value to highlight the sensor has stopped.
+例として、センサーデータをダッシュボードに流しているいる場合、
+センサーの値送信が止まった場合、ダッシュボード上のチャートでは値の更新が止まってしまいます。
+センサーが止まったことを示すためにも、チャートを更新するためのプレースホルダーのメッセージとなる `0` 値の送信が必要になります。
 
-### Solution
+### 解決
 
-Use the <code class="node">Trigger</code> node to detect when a message has not
-arrived after a defined interval and a second <code class="node">Trigger</code> node
-to send the placeholder messages at a regular interval.
+<code class="node">Trigger</code> ノードを使用して、あらかじめ定義した間隔でセンサー値を受信していないことを検知し、
+2つめの <code class="node">Trigger</code> ノードでプレースホルダーメッセージを定期的に送信します。
 
-#### Example
+#### 例
 
 ![](/images/basic/trigger-placeholder.png){:width="711px"}
 
@@ -30,23 +28,19 @@ to send the placeholder messages at a regular interval.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example flow, the top branch represents the normal flow of the messages,
-from the <code class="node">Inject</code> node to the <code class="node">Debug</code>
-node.
+例のフローでは、上部のブランチで <code class="node">Inject</code> ノードから
+<code class="node">Debug</code> ノードへの通常のメッセージのフローを示しています。
 
-The messages also get passed to the first <code class="node">Trigger</code> node
-on a second branch of the flow. That node is configured to initially send a payload
-of `"reset"`, then to wait for 2 seconds before sending a timeout message. The
-option to extend the delay if new messages arrive is also selected. This means
-as long as messages continue to arrive, the node will not do anything. Once 2
-seconds passes after the last message to arrive, it will send on the timeout message.
+メッセージは、2つめのブランチの先頭の <code class="node">Trigger</code> ノードへも流れています。
+ノードは最初に `"reset"` のpayloadを送信し、2秒待って `"timeout"` メッセージを送信するよう設定されています。
+新しいメッセージを受信した場合、この遅延を延長するオプションも選択されています。
+つまり、メッセージを継続的に受信し続ける限り、ノードは何もしないということです。
+最後のメッセージ受信から2秒を経過すると、一度だけ `"timeout"` メッセージを送信します。
 
-The timeout message feeds into a second <code class="node">Trigger</code> node. This
-node is configured to send on `0` every two seconds and feeds back into the top
-branch. The node is also configured to stop sending if it receives a `msg.payload`
-of `"reset"`. As this is the initial message sent by the first
-<code class="node">Trigger</code> node when it receives a sensor message, this will
-cause the second <code class="node">Trigger</code> node to be reset when the sensor
-resumes sending its own messages.
+タイムアウトメッセージは後続の <code class="node">Trigger</code> ノードに送信されます。
+このノードは2秒ごとに `0` を送信するように設定されており、一番上のブランチに合流します。
+ノードは `msg.payload` が `"reset"` の場合、送信を停止するようにも設定されています。
+これは、先頭の <code class="node">Trigger</code> ノードがセンサーのメッセージを受信することにより、そこから最初のメッセージが送信され、
+センサー自身の値送信が再開されたとき、2番目の <code class="node">Trigger</code> ノードが初期化されます。
