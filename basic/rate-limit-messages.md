@@ -1,21 +1,20 @@
 ---
 layout: default
-title: Slow down messages passing through a flow
+title: メッセージの流量制限
 ---
 
-### Problem
+### 課題
 
-You want to slow down the messages passing through a flow. For example,
-you have a message containing an array of values that you
-[split into a stream of messages](/basic/operate-on-array) and want to process
-each message in that stream at a rate of one per second.
+メッセージがフローを通過する量を制限したい。
+たとえば、[メッセージをストリームに分割](/basic/operate-on-array) した配列をもつメッセージがあるとして、
+そのストリーム内の各メッセージを毎秒1回処理したいとします。
 
-### Solution
+### 解決
 
-Use a <code class="node">Delay</code> node configured to rate limit the messages
-passing through it.
+<code class="node">Delay</code> ノードを使用して、
+メッセージ通過の流量制限を設定します。
 
-#### Example
+#### 例
 
 ![](/images/basic/rate-limit-messages.png){:width="615px"}
 
@@ -26,9 +25,9 @@ passing through it.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The rate limiting mode of the <code class="node">Delay</code> node can be used to
-change the rate of messages passing through it. It is configured with the desired
-number of messages to pass through the node per time interval. It will evenly
-spread the delivery of messages across the time period.
+メッセージの流量制限を動作に設定した <code class="node">Delay</code> ノードは
+通過するメッセージの流量を変更することに使われます。
+ノードには、時間間隔ごとにノードを通過するメッセージの数を設定します。
+これはメッセージの通過を等間隔に広げます。
