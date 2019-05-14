@@ -1,21 +1,20 @@
 ---
 layout: default
-title: Handle messages at a regular rate
+title: 定期的にメッセージを処理
 ---
 
-### Problem
+### 課題
 
-You want to handle messages at a regular rate, ignoring messages that arrive too
-quickly. For example, you have a sensor sending data every second but you only
-want to handle an update every 5 seconds. The messages you handle must be the most
-recent.
+大量のメッセージをそのまま流さず、定期的に処理したい。
+たとえば、1秒ごとにデータを送信するセンサーがあるが、
+値の更新は5秒ごとで、操作するメッセージがいちばん最新のものでよい場合など。
 
-### Solution
+### 解決
 
-Use a <code class="node">Delay</code> node configured to rate limit the messages
-passing through it with the option to drop intermediate messages enabled.
+中間メッセージを削除するオプションを有効に設定した <code class="node">Delay</code> ノードを使用して、
+メッセージ通過の流量制限を行います。
 
-#### Example
+#### 例
 
 ![](/images/basic/rate-limit-message-stream.png){:width="601px"}
 
@@ -26,9 +25,9 @@ passing through it with the option to drop intermediate messages enabled.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The rate limiting mode of the <code class="node">Delay</code> node can be used to
-change the rate of messages passing through it. With the option to drop intermediate
-messages enabled, it will discard any message that arrives within the rate limit
-interval.
+メッセージの流量制限を動作に設定した <code class="node">Delay</code> ノードは
+通過するメッセージの流量を変更することに使われます。
+中間メッセージを削除するオプションを有効にすると、
+流量に設定した時間間隔内に受信したメッセージはすべて破棄されます。
