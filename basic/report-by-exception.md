@@ -1,21 +1,20 @@
 ---
 layout: default
-title: Drop messages that have not changed value
+title: 値が変わっていないメッセージの削除
 ---
 
-### Problem
+### 課題
 
-You want to drop a message if the value of its payload has not changed since the
-last message. For example, you have a sensor sending the state of a switch at
-regular intervals and you only want to know when the value has changed.
+最後にメッセージを受信したときから値が変更されていない場合、そのメッセージを削除したい。
+たとえば、スイッチの状態を定期的に送信するセンサーがあり、
+値が変わった時だけ知りたい場合など。
 
+### 解決
 
-### Solution
+<code class="node">RBE</code> (Report By Exception) ノードを使用して
+値が変更されていない限りメッセージをブロックします。
 
-Use the <code class="node">RBE</code> node (Report By Exception) to block messages
-unless its value has changed.
-
-#### Example
+#### 例
 
 ![](/images/basic/report-by-exception.png){:width="618px"}
 
@@ -26,10 +25,10 @@ unless its value has changed.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">RBE</code> can be used to drop messages unless their value
-has changed. This is useful for detecting changes.
+<code class="node">RBE</code> は、値が変更されていない場合にメッセージを削除すために利用されます。
+これは値の変更検知に有効です。
 
-If the property being checked is a number, the node can also be configured with
-a threshold for how much the value must change for the message to be passed on.
+比較するプロパティ値が数値だった場合は、どれくらい値が変わったときにメッセージを通過させるかのしきい値を
+ノードに設定することもできます。
