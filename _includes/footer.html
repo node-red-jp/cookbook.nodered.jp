@@ -48,7 +48,7 @@
     });
 
     $(".flow").hide();
-    $('<button class="copy-button" type="button">Copy</button>').prependTo(".flow").click(function(e) {
+    $('<button class="copy-button" type="button">コピー</button>').prependTo(".flow").click(function(e) {
         var ta = document.createElement('textarea');
         ta.value = $(this).next()[0].innerText;
         ta.style.position = 'absolute';
@@ -57,19 +57,19 @@
         ta.select();
         document.execCommand('copy');
         document.body.removeChild(ta);
-        $(this).text("Copied!");
+        $(this).text("コピーしました!");
         var self = $(this);
         setTimeout(function() {
-            self.text("Copy");
+            self.text("コピー");
         },3000)
     })
-    $('<button class="show-flow-button" type="button">Show flow</button>').insertBefore(".flow").click(function(e) {
+    $('<button class="show-flow-button" type="button">フローを表示</button>').insertBefore(".flow").click(function(e) {
         if ($(".flow").is(":visible")) {
             $(".flow").slideUp();
-            $(this).text("Show flow");
+            $(this).text("フローを表示");
         } else {
             $(".flow").slideDown();
-            $(this).text("Hide flow");
+            $(this).text("フローを隠す");
         }
     })
   });
