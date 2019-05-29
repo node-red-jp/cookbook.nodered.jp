@@ -1,6 +1,6 @@
 ---
 layout: default
-title: メッセージの流量制限
+title: メッセージの通過を遅らせる
 ---
 
 ### 課題
