@@ -18,7 +18,7 @@
 - [メッセージの通過を遅らせる](/basic/rate-limit-messages)
 - [定期的にメッセージを処理](/basic/rate-limit-message-stream)
 - [値が変わっていないメッセージの削除](/basic/report-by-exception)
-- [Create a single message from separate streams of messages](/basic/join-streams)
+- [複数のストリームメッセージから単一のメッセージへまとめる](/basic/join-streams)
 
 #### Error handling
 

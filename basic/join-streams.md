@@ -1,22 +1,19 @@
 ---
 layout: default
-title: Create a single message from separate streams of messages
+title: 複数のストリームメッセージから単一のメッセージへまとめる
 ---
 
-### Problem
+### 課題
 
-You have messages arriving from different sources that you need to combine into
-a single message.
+異なるソースからメッセージを受信しており、単一のメッセージにまとめたい。
+たとえば、3つの異なるセンサーが発する値を、単一のデータベースのエントリとして登録したい場合。
 
-For example, you have three different sensors publishing values and you want to
-insert them into a database as a single entry.
+### 解決
 
-### Solution
+各ストリームに一意の `msg.topic` を指定して、
+<code class="node">Join</code> ノードを使用して単一のメッセージにまとめます。
 
-Give each stream a unique `msg.topic` value and use the <code class="node">Join</code>
-node to group them into a single message.
-
-#### Example
+#### 例
 
 ![](/images/basic/join-streams.png){:width="571px"}
 
@@ -27,19 +24,18 @@ node to group them into a single message.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example flow, each <code class="node">Inject</code> node represents a
-different source of messages. They each set a unique `msg.topic` value so they
-can be identified later in the flow.
+例のフローでは、それぞれの <code class="node">Inject</code> ノードは異なるメッセージ送信元を表しています。
+それらは、別々の `msg.topic` に値をセットしており、後続のフローで識別されます。
 
-The <code class="node">Join</code> node has been configured in manual mode to
-create a key/value object using `msg.topic` as the key name. As we know there
-are three separate streams of messages to join, the node has been to configure to
-send on a message when it receives that number of parts.
+<code class="node">Join</code> ノードは `msg.topic` をキー名として、
+key/valueオブジェクトを生成するよう手動で設定されています。
+すでにご存知のとおり、結合すべき3つの独立したメッセージのストリームが存在し、
+ノードは指定数のメッセージパーツを受信後にメッセージを送信します。
 
-This means it will send on a message each time it receives at least one message
-from three different topics - using the most recent value from each topic.
+各3つの異なるtopicに少なくとも1つのメッセージを受信するたびに、
+各topicの最新の値を使用してメッセージを送信することを意味します。
 
 ```json
 {
@@ -49,8 +45,7 @@ from three different topics - using the most recent value from each topic.
 }
 ```
 
-The node has further options to change its behaviour that have not been used in
-this recipe. For example, a timeout can be set to ensure it sends *something*
-in case one of the sensors stops sending values. If that is a concern, you may
-consider [this recipe](/basic/trigger-timeout) for providing a placeholder
-value.
+このノードにはさらに、レシピ内で使用されていない場合の挙動を変更するオプションを持っています。
+たとえば、タイムアウトを設定し、センサーのひとつが値送信を停止した場合でも、
+*何かしらのメッセージ*が送信されることを担保するする場合などです。
+これが問題ある場合は、[このレシピ](/basic/trigger-timeout)を参考にプレースホルダーとなる値を送信することを検討してみてください。
