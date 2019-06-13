@@ -16,7 +16,7 @@
 - [設定した時間内でメッセージの受信がなければフローを実行](/basic/trigger-timeout)
 - [ストリームの送信が止まった際にプレースホルダーメッセージを送信](/basic/trigger-placeholder)
 - [メッセージの通過を遅らせる](/basic/rate-limit-messages)
-- [メッセージの流量制限](/basic/rate-limit-message-stream)
+- [定期的にメッセージを処理](/basic/rate-limit-message-stream)
 - [Drop messages that have not changed value](/basic/report-by-exception)
 - [Create a single message from separate streams of messages](/basic/join-streams)
 
