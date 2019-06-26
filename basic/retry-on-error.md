@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Automatically retry an action after an error
+title: エラー発生後に自動的にリトライ
 slug:
   - label: error handling
     url: /#error-handling
   - retry
 ---
 
-### Problem
+### 課題
 
-You want to retry an action after an error is thrown.
+エラーがthrowされたあとに、リトライしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">Catch</code> node to receive the error and connect it
-back to the node that needs to retry the action.
+<code class="node">Catch</code> ノードを使用してエラー情報を受け取り、
+リトライしたい動作を行うノードに接続し直します。
 
-#### Example
+#### 例
 
 ![](/images/basic/retry-on-error.png){:width="610px"}
 
@@ -27,15 +27,16 @@ back to the node that needs to retry the action.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-Some errors are transitory and an action simply needs to be retried in order to succeed.
-Alternatively, there may be some remedial action needed before retrying.
+一部のエラーは一時的なものであり、
+単にリトライすると成功するようなものがあります。
+もしくは、リトライする前に何かしらの対処が必要になることもあります。
 
-In the example flow, a <code class="node">Function</code> simulates a random
-error - there is a 50% chance it will throw an error rather than pass on the message.
+例のフローでは <code class="node">Function</code> ノードが
+50%の確率でメッセージを通過させずランダムにエラーをthrowします。
 
-The <code class="node">Catch</code> receives the error which passes the message
-back to the <code class="node">Function</code> node to retry. It also includes
-a <code class="node">Delay</code> node as, in some circumstances, it is suitable
-to wait for a short interval before retrying.
+<code class="node">Catch</code> ノードはエラーを受け取り、
+<code class="node">Function</code> ノードへリトライします。
+これに <code class="node">Delay</code> ノードを含んでいるのは、
+状況によっては少し短い間隔をあけてリトライすることが良い場合もあるためです。
