@@ -1,6 +1,10 @@
 ---
 layout: default
 title: メッセージをコンテキストの値によってルーティングする
+slug:
+  - label: flow control
+    url: /#flow-control
+  - route on context
 ---
 
 ### 課題

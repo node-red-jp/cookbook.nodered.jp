@@ -1,6 +1,10 @@
 ---
 layout: default
 title: messageプロパティを削除
+slug:
+  - label: messages
+    url: /#messages
+  - delete property
 ---
 
 ### 課題

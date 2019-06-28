@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 定期的にメッセージを処理
+slug:
+  - label: flow control
+    url: /#flow-control
+  - rate limit
 ---
 
 ### 課題

@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 設定した時間内でメッセージの受信がなければフローを実行
+slug:
+  - label: flow control
+    url: /#flow-control
+  - trigger timeout
 ---
 
 ### 課題

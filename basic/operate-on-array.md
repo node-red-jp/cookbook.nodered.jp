@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 配列内の各要素に対して操作を実行
+slug:
+  - label: flow control
+    url: /#flow-control
+  - operate on array
 ---
 
 ### 課題

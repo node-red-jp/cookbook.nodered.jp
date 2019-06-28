@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 指定の時間にフローを実行
+slug:
+  - label: flow control
+    url: /#flow-control
+  - trigger at time
 ---
 
 ### 課題
