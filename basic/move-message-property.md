@@ -1,6 +1,10 @@
 ---
 layout: default
 title: messsageプロパティの移動
+slug:
+  - label: messages
+    url: /#messages
+  - move property
 ---
 
 ### 課題

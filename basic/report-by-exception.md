@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 値が変わっていないメッセージの削除
+slug:
+  - label: flow control
+    url: /#flow-control
+  - rbe
 ---
 
 ### 課題

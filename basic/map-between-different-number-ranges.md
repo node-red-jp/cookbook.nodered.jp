@@ -1,6 +1,10 @@
 ---
 layout: default
 title: 異なる範囲の数値をマッピングする
+slug:
+  - label: messages
+    url: /#messages
+  - map range
 ---
 
 ### 課題

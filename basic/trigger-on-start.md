@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Node-RED起動の度にフローを実行
+slug:
+  - label: flow control
+    url: /#flow-control
+  - trigger on start
 ---
 
 ### 課題

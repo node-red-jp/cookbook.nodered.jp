@@ -1,6 +1,10 @@
 ---
 layout: default
 title: メッセージの通過を遅らせる
+slug:
+  - label: flow control
+    url: /#flow-control
+  - rate limit
 ---
 
 ### 課題
