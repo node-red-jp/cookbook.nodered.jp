@@ -23,7 +23,7 @@
 #### Error handling
 
 - [ノードがエラーをthrowした場合にフローを実行](/basic/trigger-on-error)
-- [Automatically retry an action after an error](/basic/retry-on-error)
+- [エラー発生後に自動的にリトライ](/basic/retry-on-error)
 
 #### Working with data formats
 
