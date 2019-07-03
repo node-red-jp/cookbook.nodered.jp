@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Trigger a flow when a node throws an error
+title: ノードがエラーをthrowした場合にフローを実行
 slug:
   - label: error handling
     url: /#error-handling
   - trigger on error
 ---
 
-### Problem
+### 問題
 
-You want to trigger a flow when a node throws an error.
+ノードがエラーをthrowした場合にフローを実行したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">Catch</code> node to receive the error and trigger a flow.
+<code class="node">Catch</code> ノードを使って、エラー情報を受け取り、フローを実行します。
 
-#### Example
+#### 例
 
 ![](/images/basic/trigger-on-error.png){:width="401px"}
 
@@ -26,14 +26,12 @@ Use the <code class="node">Catch</code> node to receive the error and trigger a 
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">Catch</code> node can be configured to catch errors from
-specific nodes in the flow or from any node. This allows you to create different
-error handling flows for different nodes.
+<code class="node">Catch</code> ノードは、フロー内の特定のノードや任意のノードで発生したエラーをcatchするよう設定できます。
+これにより、異なるノードに対して異なるエラーハンドリングを設定できます。
 
-The <code class="node">Catch</code> node sends on the message that was logged with
-the error. It also sets `msg.error` with details of the error and which node triggered
-it.
+<code class="node">Catch</code> ノードは、エラーとしてロギングされた情報をメッセージとして送信します。
+さらに、`msg.error` にエラーの詳細情報とどのノードで発生したかがセットされています。
 
-Note that this requires nodes to properly log their errors so that they can be caught.
+これらのエラーハンドリングが行われることも考慮して、ノードはエラーを正しくロギングする必要があります。
