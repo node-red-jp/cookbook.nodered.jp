@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Convert to/from JSON
+title: JSONの相互変換
 slug:
   - label: formats
     url: /#working-with-data-formats
@@ -8,17 +8,15 @@ slug:
 
 ---
 
-### Problem
+### 課題
 
-You want to convert a message property between a JSON string and the JavaScript object
-it represents.
+メッセージプロパティをJSON文字列に変換したり、JavaScriptのオブジェクトに変換したりしたい。
 
-### Solution
+### 解決
 
-The <code class="node">JSON</code> node can be used to convert between the two
-formats.
+<code class="node">JSON</code> ノードを使用して、それぞれ2つのフォーマットを変換します。
 
-#### Example
+#### 例
 
 ![](/images/basic/convert-json.png){:width="534px"}
 
@@ -29,15 +27,14 @@ formats.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example, the first flow injects the JSON string `'{"a":1}'` which the
-<code class="node">JSON</code> node converts to the equivalent JavaScript object.
+例では、最初のフローが `'{"a":1}'` というJSON文字列を生成しており、
+<code class="node">JSON</code> ノードが等価のJavaScriptオブジェクトへ変換しています。
 
-The second flow does the reverse, injecting the object `{ a: 1 }` and converting
-it to JSON.
+2つめのフローでは逆をやっており、`{ a: 1 }` というオブジェクトを生成し、JSONに変換しています。
 
-The <code class="node">JSON</code> will, by default, detect what it is being given
-to convert. It can also be configured to ensure the property is a given type. For
-example if your flow could receive either JSON or an Object, the <code class="node">JSON</code>
-node can be configured to ensure the property is an Object.
+<code class="node">JSON</code> はデフォルトでは、何がどう変換されるかを検出します。
+プロパティとして与えられる型を設定することもできます。
+たとえば、フローがJSONとオブジェクトを受け取っていても、
+<code class="node">JSON</code> ノードは、プロパティがオブジェクトになるよう設定できます。

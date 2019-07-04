@@ -27,7 +27,7 @@
 
 #### Working with data formats
 
-- [Convert to/from JSON](/basic/convert-json)
+- [JSONの相互変換](/basic/convert-json)
 - [Convert to/from XML](/basic/convert-xml)
 - [Convert to/from YAML](/basic/convert-yaml)
 - [Generate CSV output](/basic/generate-csv)
