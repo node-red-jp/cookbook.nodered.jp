@@ -1,23 +1,21 @@
 ---
 layout: default
-title: Convert to/from XML
+title: XMLの相互変換
 slug:
   - label: formats
     url: /#working-with-data-formats
   - xml
 ---
 
-### Problem
+### 課題
 
-You want to convert a message property between an XML string and the JavaScript object
-it represents.
+メッセージプロパティをXML文字列に変換したり、JavaScriptのオブジェクトに変換したりしたい。
 
-### Solution
+### 解決
 
-The <code class="node">XML</code> node can be used to convert between the two
-formats.
+<code class="node">XML</code> ノードを使用して、それぞれ2つのフォーマットを変換します。
 
-#### Example
+#### 例
 
 ![](/images/basic/convert-xml.png){:width="684px"}
 
@@ -28,9 +26,9 @@ formats.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example, the first flow injects the XML:
+例では、最初のフローが次のようなXML文字列を生成します:
 
 ~~~xml
 <note priority="high">
@@ -41,8 +39,7 @@ In the example, the first flow injects the XML:
 </note>
 ~~~
 
-The <code class="node">XML</code> node then converts it to the equivalent JavaScript
-object:
+そして、<code class="node">XML</code> ノードはそれを等価なJavaScriptオブジェクトに変換します:
 
 ~~~json
 {
@@ -58,11 +55,9 @@ object:
 }
 ~~~
 
-Note how the attributes of the `<note>` tag have been added under the `$` property
-of the `note` object.
+`<note>` タグの下に `$` 属性が追加されていることに注意してください。
 
-The second flow does the reverse, injecting that object and converting it to XML.
+2つめのフローは逆を行っており、オブジェクトをinjectしてXMLに変換します。
 
-When a particular XML output format is required, it can be easier to start by
-injecting that into the <code class="node">XML</code> node to see the necessary
-JavaScript object required to generate it when fed back the other way.
+特定のXMLフォーマットで出力を得たい場合、<code class="node">XML</code> にinjectしながら、
+必要となるJavaScriptオブジェクトを見つけ出す方法が簡単です。
