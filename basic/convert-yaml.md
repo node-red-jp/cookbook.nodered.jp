@@ -1,23 +1,21 @@
 ---
 layout: default
-title: Convert to/from YAML
+title: YAMLの相互変換
 slug:
   - label: formats
     url: /#working-with-data-formats
   - yaml
 ---
 
-### Problem
+### 課題
 
-You want to convert a message property between a YAML string and the JavaScript object
-it represents.
+メッセージプロパティをYAML文字列に変換したり、JavaScriptのオブジェクトに変換したりしたい。
 
-### Solution
+### 解決
 
-The <code class="node">YAML</code> node can be used to convert between the two
-formats.
+<code class="node">YAML</code> ノードを使用して、それぞれ2つのフォーマットを変換します。
 
-#### Example
+#### 例
 
 ![](/images/basic/convert-yaml.png){:width="682px"}
 
@@ -28,9 +26,9 @@ formats.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example, the first flow injects the YAML:
+例では、最初のフローが次のようなYAML文字列を生成します:
 
 ~~~yaml
 a: 1
@@ -40,8 +38,6 @@ b:
   - 3
 ~~~
 
-The <code class="node">YAML</code> node then converts it to the equivalent JavaScript
-object.
+そして、<code class="node">YAML</code> ノードはそれを等価なJavaScriptオブジェクトに変換します:
 
-The second flow does the reverse, injecting the object `{ a: 1, b: [1,2,3] }`
-and converting it to YAML.
+2つめのフローでは逆を行っており、`{ a: 1, b: [1,2,3] }` というオブジェクトを生成し、YAMLに変換しています。

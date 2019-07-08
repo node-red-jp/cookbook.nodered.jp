@@ -29,7 +29,7 @@
 
 - [JSONの相互変換](/basic/convert-json)
 - [XMLの相互変換](/basic/convert-xml)
-- [Convert to/from YAML](/basic/convert-yaml)
+- [YAMLの相互変換](/basic/convert-yaml)
 - [Generate CSV output](/basic/generate-csv)
 - [Parse CSV input](/basic/parse-csv)
 - [Extracting data from an HTML page](/http/simple-get-request)
