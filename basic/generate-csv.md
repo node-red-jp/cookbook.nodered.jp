@@ -1,23 +1,21 @@
 ---
 layout: default
-title: Generate CSV output
+title: CSVを生成して出力
 slug:
   - label: formats
     url: /#working-with-data-formats
   - csv
 ---
 
-### Problem
+### 課題
 
-You want to generate valid CSV output from a message containing key/value pairs of
-data.
+キーと値のペアであるデータを含むメッセージから、CSV出力に適した文字列を生成します。
 
-### Solution
+### 解決
 
-The <code class="node">CSV</code> node can be used to generate well-formatted CSV
-strings.
+<code class="node">CSV</code> ノードを使用して、フォーマットされたCSV文字列を出力します。
 
-#### Example
+#### 例
 
 ![](/images/basic/generate-csv.png){:width="688px"}
 
@@ -28,10 +26,9 @@ strings.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example, the first flow injects a payload containing a single object with three
-properties containing randomly generated values.
+例では、最初のフローがランダムに生成された3つのプロパティを持つ単一のオブジェクトを含んだpayloadを生成しています。
 
 ```javascript
 {
@@ -41,20 +38,20 @@ properties containing randomly generated values.
 }
 ```
 
-The <code class="node">CSV</code> has been configured with the desired column names
-and uses the corresponding object properties to fill in those columns.
+<code class="node">CSV</code> ノードは、列名として抽出するための列名を設定し、
+それらを埋めるように対応するオブジェクトのプロパティが利用されます。
 
-The resulting message contains the well-formatted CSV string for that single row
-of data - including a newline character at the end.
+結果としてメッセージは、フォーマットされた単一の行データと末尾に改行を含んだ
+CSV用の文字列を含みます。
 
 ```javascript
 "10,20,30\n"
 ```
 
-This is suitable for passing to a <code class="node">File Out</code> node to
-append to an existing CSV file.
+これは <code class="node">File Out</code> ノードへそのまま渡して、
+既存のCSVファイルへ追記する用途に適しています。
 
-The second flow injects an array of objects with randomly generated values:
+2つめのフローはランダムに生成された値を含む配列オブジェクトをinjectしています:
 
 ```javascript
 [
@@ -65,8 +62,8 @@ The second flow injects an array of objects with randomly generated values:
 ]
 ```
 
-Again the CSV node has been configured with the column names to use. It has also
-been configured to include the column names as the first row of output.
+ここでも、CSVノードは抽出するための列名を設定しています。
+また、1行目を列名として含めて出力するよう設定されています。
 
 ```javascript
 a,b,c

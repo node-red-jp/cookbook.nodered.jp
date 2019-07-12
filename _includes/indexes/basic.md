@@ -30,7 +30,7 @@
 - [JSONの相互変換](/basic/convert-json)
 - [XMLの相互変換](/basic/convert-xml)
 - [YAMLの相互変換](/basic/convert-yaml)
-- [Generate CSV output](/basic/generate-csv)
+- [CSVを生成して出力](/basic/generate-csv)
 - [Parse CSV input](/basic/parse-csv)
 - [Extracting data from an HTML page](/http/simple-get-request)
 - [Split text into one message per line](/basic/split-text)
