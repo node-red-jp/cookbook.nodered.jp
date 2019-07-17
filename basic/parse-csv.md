@@ -1,23 +1,21 @@
 ---
 layout: default
-title: Parse CSV input
+title: CSV入力を変換
 slug:
   - label: formats
     url: /#working-with-data-formats
   - csv
 ---
 
-### Problem
+### 課題
 
-You want to parse CSV data to work with the values it contains.
+CSVデータを変換したい。
 
-### Solution
+### 解決
 
-The <code class="node">CSV</code> node can be used to parse CSV and generate
-JavaScript objects from it.
+<code class="node">CSV</code> ノードを使用して、CSVからJavaScriptオブジェクトへ変換します。
 
-
-#### Example
+#### 例
 
 ![](/images/basic/parse-csv.png){:width="660px"}
 
@@ -28,9 +26,9 @@ JavaScript objects from it.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example, the flow injects a payload containing CSV data:
+例では、最初のフローでCSVデータを含むpayloadを生成しています:
 
 ```javascript
 # This is some random data
@@ -41,13 +39,12 @@ a,b,c
 32,47,65
 ```
 
-The <code class="node">CSV</code> has been configured to ignore the first line of
-the input so it ignores the initial comment line. It then uses the next line to
-get the column names, and the remaining rows for the data.
+<code class="node">CSV</code> ノードは最初の1行を無視するように設定されており、
+これにより最初のコメント行を読み飛ばします。
+そして、次の行で列名を取得して、残りをデータ行として処理します。
 
-
-In this particular example, the node has also been configured to send a single
-message with all of the data. This results in a message with the payload:
+またこの例では、ノードは配列化した1つのメッセージを送信するよう設定されています。
+結果となるメッセージのpayloadは次のとおりです:
 
 ```javascript
 [
@@ -58,7 +55,6 @@ message with all of the data. This results in a message with the payload:
 ]
 ```
 
-It is also possible to configure the node to emit one message for each row of data.
-In this mode, the messages will also include the `msg.parts` property that allows
-them to be passed to a <code class="node">Join</code> node to reassemble them back
-into a single array.
+このノードは、行毎にメッセージを分割して出力するようにも設定できます。
+このモードでは、メッセージは `msg.parts` プロパティも含まれ、
+<code class="node">Join</code> ノードで単一の配列に再構成することもできます。
