@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Simple GET request
+title: シンプルなGETリクエスト
 slug:
   - label: http
     url: /#http-requests
   - get
 ---
 
-### Problem
+### 課題
 
-You want to make a simple GET request to a web site and extract useful information.
+WebサイトへのシンプルなGETリクエストを行い、必要な情報を抽出したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">HTTP Request</code> node to make an HTTP request and an
-<code class="node">HTML</code> node to extract elements from the retrieved html document.
+<code class="node">HTTP Request</code> ノードでHTTPリクエストを行い、
+取得したHTMLドキュメントから <code class="node">HTML</code> ノードで要素を抽出します。
 
-#### Example
+#### 例
 
 ![](/images/http/simple-get-request.png)
 
@@ -27,17 +27,15 @@ Use the <code class="node">HTTP Request</code> node to make an HTTP request and 
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-To find content in a web page, the Chrome browser’s ‘Inspect Element’ can be a
-useful tool.  Using the browser, right click on a page element to see the tags,
-ids and classes applied to an element as shown.
+Webページ内のコンテンツを見つけるには、Google Chromeブラウザの'検証'が有用なツールとなります。
+ブラウザを使用して、ページの要素上で右クリックをすると、要素に適用されているタグ・id・classが表示されます。
 
-In this example we retrieve the latest version of Node-RED from [https://nodered.org]().
-Using the inspector we can see the version is located in a `<span>` tag with the
-class `node-red-latest-version`.
+この例では、[https://nodered.org]() からNode-REDの最新のバージョンを取得しています。
+インスペクタを使用すると、最新バージョンが `<span>` タグの `node-red-latest-version` クラスにあることが判ります。
 
-The <code class="node">HTML</code> node can be configured with the CSS selector
-`.node-red-latest-version` to return a message for each matching element.
+<code class="node">HTML</code> ノードは、CSSセレクタで
+`.node-red-latest-version` にマッチする各要素のメッセージを取得するよう設定してあります。
 
 ![](/images/http/simple-get-request-example-page.png)

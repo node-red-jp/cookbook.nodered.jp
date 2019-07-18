@@ -13,7 +13,7 @@
 - [Work with cookies](/http/work-with-cookies)
 
 #### HTTP requests
-- [Simple GET request](/http/simple-get-request)
+- [シンプルなGETリクエスト](/http/simple-get-request)
 - [Set the url of a request](/http/set-request-url)
 - [Set the url of a request using a template](/http/set-request-url-template)
 - [Set query string parameters](/http/set-query-string)
