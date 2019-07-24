@@ -33,4 +33,4 @@
 - [CSVを生成して出力](/basic/generate-csv)
 - [CSV入力を変換](/basic/parse-csv)
 - [HTMLページからデータを抽出](/http/simple-get-request)
-- [Split text into one message per line](/basic/split-text)
+- [テキストを1行1メッセージに分割](/basic/split-text)

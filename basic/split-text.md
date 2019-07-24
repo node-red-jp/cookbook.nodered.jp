@@ -1,26 +1,25 @@
 ---
 layout: default
-title: Split text into one message per line
+title: テキストを1行1メッセージに分割
 slug:
   - label: formats
     url: /#working-with-data-formats
   - text
 ---
 
-### Problem
+### 課題
 
-You want to perform an operation on every line in a block text. For example,
-you want to add the line number to the beginning of each line.
+ブロックテキストの各行に対して処理を行いたい。
+たとえば、各行に対して行番号を付け加えたい場合。
 
-### Solution
+### 解決
 
-The <code class="node">Split</code> node can be used to split the message into
-one message per line. It can be followed by the nodes needed to operate on the
-individual lines of text, followed by a <code class="node">Join</code> node to
-recombine them back into a single block of text.
+<code class="node">Split</code> ノードはメッセージの1行ごとを1メッセージに分割するため使用できます。
 
+その各行のテキストを処理するためのノードを接続し、
+そして、<code class="node">Join</code> で単一のブロックテキストに再結合して戻すことができます。
 
-#### Example
+#### 例
 
 ![](/images/basic/split-text.png){:width="717px"}
 
@@ -31,10 +30,10 @@ recombine them back into a single block of text.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-In the example, the <code class="node">Inject</code> and <code class="node">Template</code>
-nodes are used to inject a block of text with multiple lines.
+例では、複数行のテキストブロックを生成するために
+<code class="node">Inject</code> と <code class="node">Template</code> ノードを使用しています。
 
 ~~~text
 one
@@ -44,15 +43,16 @@ four
 five
 ~~~
 
-The <code class="node">Split</code> node's default behaviour when passed a string
-is to split it into one message per line.
+<code class="node">Split</code> ノードのデフォルトの挙動は
+メッセージを通過させる際に、1行ごとに1メッセージへ分割します。
 
-The <code class="node">Change</code> node modifies each message payload using
-a JSONata expression: `(parts.index+1) & ": " & payload` - which uses `msg.parts.index`
-to get the line number and prepends it to the existing `msg.payload`.
+<code class="node">Change</code> ノードは分割された各メッセージを
+JSONata式 `(parts.index+1) & ": " & payload` で変換します。
+これは、`msg.parts.index` で、行番号を取得し、
+それを `msg.payload` の先頭に追加しています。
 
-Finally the <code class="node">Join</code> node reassembles the messages into
-a single block of text:
+最後に、<code class="node">Join</code> ノードで
+メッセージを単一のブロックテキストに再構築します。
 
 ~~~text
 1: one
