@@ -1,24 +1,24 @@
 ---
 layout: default
-title: Create an HTTP Endpoint
+title: HTTPエンドポイントを作成
 slug:
   - label: http
     url: /#http-endpoints
   - create endpoint
 ---
 
-### Problem
+### 課題
 
-You want to create an HTTP endpoint that responds to GET requests with some static
-content, such as an HTML page or CSS stylesheet.
+HTMLページやCSSのような静的コンテンツを返す
+GETリクエストに対応したHTTPエンドポイントを作成したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">HTTP In</code> node to listen for requests, a
-<code class="node">Template</code> node to include the static content, and an
-<code class="node">HTTP Response</code> node to reply to the request.
+<code class="node">HTTP In</code> ノードを使用してリクエストを待ち受けます。
+<code class="node">Template</code> ノードで静的コンテンツを含めます。
+そして、<code class="node">HTTP Response</code> ノードでリクエストに対してレスポンスを返します。
 
-#### Example
+#### 例
 
 ![](/images/http/create-an-http-endpoint.png)
 
@@ -40,19 +40,18 @@ Use the <code class="node">HTTP In</code> node to listen for requests, a
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-The <code class="node">HTTP In</code> and <code class="node">HTTP Response</code>
-pair of nodes are the starting point for all HTTP endpoints you create.
+<code class="node">HTTP In</code> と <code class="node">HTTP Response</code> のノードのペアは
+作成するすべてのHTTPエンドポイントの出発点となります。
 
-Any flow that starts with an <code class="node">HTTP In</code> node must have a
-path to an <code class="node">HTTP Response</code> node otherwise requests will
-eventually timeout.
+<code class="node">HTTP In</code> で始まるいかなるフローも、タイムアウト以外では
+<code class="node">HTTP Response</code> ノードで終わらなければなりません。
 
-The <code class="node">HTTP Response</code> node uses the `payload` property of
-messages it receives as the body of the response. Other properties can be used to
-further customize the response - they are covered in other recipes.
+<code class="node">HTTP Response</code> ノードはメッセージの `payload` プロパティを
+レスポンスボディとして使用します。
+他のプロパティはカスタマイズされたレスポンスとして使用できます、これについては他のレシピで説明します。
 
-The <code class="node">Template</code> node provides a convenient way to embed
-a body of content into a flow. It may be desirable to maintain such static content
-outside of the flow.
+
+<code class="node">Template</code> ノードはボディコンテンツをフローに埋め込むための便利な方法を提供します。
+ただ、このような静的コンテンツはフローの外側でメンテナンスすることが望ましいかもしれません。
