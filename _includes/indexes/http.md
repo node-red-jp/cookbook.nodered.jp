@@ -1,6 +1,6 @@
 #### HTTP endpoints
 
-- [Create an HTTP Endpoint](/http/create-an-http-endpoint)
+- [HTTPエンドポイントを作成](/http/create-an-http-endpoint)
 - [Handle query parameters passed to an HTTP endpoint](/http/handle-query-parameters)
 - [Handle url parameters in an HTTP endpoint](/http/handle-url-parameters)
 - [Access HTTP request headers](/http/access-http-request-headers)
