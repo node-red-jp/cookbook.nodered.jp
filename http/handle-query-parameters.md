@@ -1,24 +1,24 @@
 ---
 layout: default
-title: Handle query parameters passed to an HTTP endpoint
+title: HTTPエンドポイントに渡されたクエリパラメータのハンドル
 slug:
   - label: http
     url: /#http-endpoints
   - query parameters
 ---
 
-### Problem
+### 課題
 
-You want to access the query parameters passed to an HTTP endpoint, such as:
+次に示すような、HTTPエンドポイントに渡されたクエリパラメータにアクセスしたい。
 
     http://example.com/hello-query?name=Nick
 
-### Solution
+### 課題
 
-Use the `msg.req.query` property of the message sent by the <code class="node">HTTP In</code>
-node to access the parameters.
+<code class="node">HTTP In</code> ノードに送信されたメッセージの `msg.req.query` プロパティを使用して、
+パラメータにアクセスします。
 
-#### Example
+#### 例
 
 ![](/images/http/handle-query-parameters.png)
 
@@ -40,12 +40,11 @@ node to access the parameters.
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-The `msg.req.query` property is an object of key/value pairs for each query parameter.
+`msg.req.query` プロパティは各クエリパラメータのキーと値のペアで成り立つオブジェクトです。
 
-In the above example, a request to `/hello-query?name=Nick&colour=blue` results in the property
-containing:
+上記の例での `/hello-query?name=Nick&colour=blue` へのリクエストの結果は次に示すものを含みます。
 
 ~~~json
 {
@@ -54,8 +53,8 @@ containing:
 }
 ~~~
 
-If there are multiple query parameters with the same name, they will be provided
-as an array. For example, `/hello-query?colour=blue&colour=red`:
+同じ名前の複数のクエリパラメータがある場合は、配列になります。
+たとえば、`/hello-query?colour=blue&colour=red` は次のとおりです。
 
 ~~~json
 {
