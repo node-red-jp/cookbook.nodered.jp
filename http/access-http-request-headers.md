@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Access HTTP request headers
+title: HTTPリクエストヘッダへアクセス
 slug:
   - label: http
     url: /#http-endpoints
   - headers
 ---
 
-### Problem
+### 課題
 
-You want to access the HTTP headers sent in a request.
+送信されたリクエストのHTTPヘッダへアクセスしたい。
 
-### Solution
+### 解決
 
-Use the `msg.req.headers` property of the message sent by the <code class="node">HTTP In</code>
-node to access the headers.
+<code class="node">HTTP In</code> ノードに送信されたメッセージの
+`msg.req.headers` プロパティを使用して、ヘッダにアクセスします。
 
-#### Example
+#### 例
 
 ![](/images/http/access-http-request-headers.png){:width="800px"}
 
@@ -38,7 +38,7 @@ node to access the headers.
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-The `msg.req.headers` property is an object of key/value pairs for each request header.
-The header names are all lower-cased regardless of how they appear in the request.
+`msg.req.headers` プロパティは、各リクエストパラメータのキーと値のペアで構成されたオブジェクトです。
+ヘッダ名は、リクエストの内容にかかわらず、すべて小文字です。
