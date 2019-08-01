@@ -1,30 +1,30 @@
 ---
 layout: default
-title: Handle url parameters in an HTTP endpoint
+title: HTTPエンドポイントのURLパラメータのハンドル
 slug:
   - label: http
     url: /#http-endpoints
   - url parameters
 ---
 
-### Problem
+### 課題
 
-You want to create a single HTTP endpoint that can handle requests where parts
-of the path are set per-request.
+リクエストごとにセットされるパスパラメータを
+ハンドルできる単一のHTTPエンドポイントを作成したい。
 
-For example, a single endpoint that can handle requests to both:
+たとえば、単一のエンドポイントで次の両方がハンドルできます:
 
     http://example.com/hello-param/Nick
     http://example.com/hello-param/Dave
 
+### 解決
 
-### Solution
+<code class="node">HTTP In</code> ノードの `URL` プロパティで、
+名前付きのパスパラメータを使用します。
+そして、メッセージの `msg.req.params` プロパティで
+リクエスト内で使用している値へアクセスできます。
 
-Use named path parameters in your <code class="node">HTTP In</code> node's `URL`
-property and then access the specific value provided in a request using the
-`msg.req.params` property of the message.
-
-#### Flow
+#### フロー
 
 ![](/images/http/handle-url-parameters.png)
 
@@ -35,7 +35,8 @@ property and then access the specific value provided in a request using the
 {: .flow}
 {% endraw %}
 
-#### Example
+#### 例
+
 ~~~text
 [~]$ curl http://localhost:1880/hello-param/Nick
 <html>
@@ -47,15 +48,15 @@ property and then access the specific value provided in a request using the
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-Named path parameters in the `URL` property can be used to identify parts of the
-path that can vary between requests.
+`URL` プロパティの名前付きパスパラメータは、
+さまざまなリクエストのパスの一部を識別するのに使用されます。
 
-The `msg.req.params` property is an object of key/value pairs for each path parameter.
+`msg.req.params` プロパティは、各パスパラメータのキーと値のペアで構成されたオブジェクトです。
 
-In the above example, the node is configured with a URL of `/hello-params/:name`,
-so a request to `/hello-param/Nick` results in the `msg.req.params` property containing:
+上記の例では、ノードにはURL `/hello-params/:name` が設定されているため、
+`/hello-param/Nick` へのリクエスト結果である `msg.req.params` には次を含みます:
 
 ~~~json
 {

@@ -2,7 +2,7 @@
 
 - [HTTPエンドポイントを作成](/http/create-an-http-endpoint)
 - [HTTPエンドポイントに渡されたクエリパラメータのハンドル](/http/handle-query-parameters)
-- [Handle url parameters in an HTTP endpoint](/http/handle-url-parameters)
+- [HTTPエンドポイントのURLパラメータのハンドル](/http/handle-url-parameters)
 - [Access HTTP request headers](/http/access-http-request-headers)
 - [Include data captured in another flow](/http/include-data-from-another-flow)
 - [Serve JSON content](/http/serve-json-content)
