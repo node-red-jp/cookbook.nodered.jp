@@ -1,22 +1,21 @@
 ---
 layout: default
-title: Serve JSON content
+title: JSONを返す
 slug:
   - label: http
     url: /#http-endpoints
   - serve json
 ---
 
-### Problem
+### 課題
 
-You want to respond to an HTTP request with JSON data.
+HTTPリクエストにJSONデータで返したい。
 
-### Solution
+### 解決
 
-Set the `content-type` of the response to `application/json` using the `msg.headers`
-object.
+`msg.headers` オブジェクトを使用して、レスポンスの `content-type` に `application/json` をセットします。
 
-#### Example
+#### 例
 
 ![](/images/http/serve-json-content.png)
 
@@ -42,10 +41,10 @@ Connection: keep-alive
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-The HTTP headers returned in the response can be set using the `msg.headers`
-property. It should be an object of key/value pairs for each header.
+レスポンスで返されるHTTPヘッダは `msg.headers` プロパティでセットできます。
+これは各ヘッダのキーと値のペアで構成されたオブジェクトでなければなりません。
 
-To return well-formed JSON, the `Content-Type` header should be set to
-`application/json` so the receiver knows to handle it as JSON data.
+より正しいJSON形式のレスポンスとするには、受信側にJSONとして処理できることを知らせるために、
+`Content-Type` ヘッダに `application/json` がセットされているべきです。
