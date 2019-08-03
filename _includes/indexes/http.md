@@ -4,7 +4,7 @@
 - [HTTPエンドポイントに渡されたクエリパラメータのハンドル](/http/handle-query-parameters)
 - [HTTPエンドポイントのURLパラメータのハンドル](/http/handle-url-parameters)
 - [HTTPリクエストヘッダへアクセス](/http/access-http-request-headers)
-- [Include data captured in another flow](/http/include-data-from-another-flow)
+- [他のフローで取得したデータの埋め込み](/http/include-data-from-another-flow)
 - [Serve JSON content](/http/serve-json-content)
 - [Serve a local file](/http/serve-a-local-file)
 - [Post raw data to a flow](/http/post-raw-data-to-a-flow)
