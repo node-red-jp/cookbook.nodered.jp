@@ -6,7 +6,7 @@
 - [HTTPリクエストヘッダへアクセス](/http/access-http-request-headers)
 - [他のフローで取得したデータの埋め込み](/http/include-data-from-another-flow)
 - [JSONを返す](/http/serve-json-content)
-- [Serve a local file](/http/serve-a-local-file)
+- [ローカルファイルを返す](/http/serve-a-local-file)
 - [Post raw data to a flow](/http/post-raw-data-to-a-flow)
 - [Post form data to a flow](/http/post-form-data-to-a-flow)
 - [Post JSON data to a flow](/http/post-json-data-to-a-flow)

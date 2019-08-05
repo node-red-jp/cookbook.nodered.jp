@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Serve a local file
+title: ローカルファイルを返す
 slug:
   - label: http
     url: /#http-endpoints
   - serve file
 ---
 
-### Problem
+### 課題
 
-You want to create an HTTP endpoint that responds to GET requests with content
-from a local file, such an png image.
+GETリクエストに対してpngイメージなどのローカルファイルをを返す
+HTTPエンドポイントを作成したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">File In</code> node to load the required content and
-set the `Content-Type` to the appropriate value for the file type being returned.
+<code class="node">File In</code> ノードを使用し必要なコンテンツをロードして、
+`Content-Type` に適切なファイルの形式となる値をセットします。
 
-#### Example
+#### 例
 
 ![](/images/http/serve-a-local-file.png)
 
@@ -33,11 +33,10 @@ set the `Content-Type` to the appropriate value for the file type being returned
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-When loading a non-text file such as an image, the <code class="node">File In</code>
-node must be configured to return a `Buffer` object.
+画像のようにテキストでないファイルをロードする場合、
+<code class="node">File In</code> ノードには `Buffer` オブジェクトを返すように設定されているべきです。
 
-So that the receiver knows how to handle the file, the `Content-Type` header must
-be set to the appropriate mime type. The example above, which returns a `.png` file
-sets the `Content-Type` header to `image/png`.
+受信者がファイルを処理できるように、`Content-Type` ヘッダには適切なMIMEタイプがセットされているべきです。
+上記の例では `.png` ファイルを返すため、`Content-Type` ヘッダに `image/png` をセットしています。
