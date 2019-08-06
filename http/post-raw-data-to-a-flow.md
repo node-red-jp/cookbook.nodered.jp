@@ -1,22 +1,23 @@
 ---
 layout: default
-title: Post raw data to a flow
+title: フローに生データをPOST
 slug:
   - label: http
     url: /#http-endpoints
   - post data
 ---
 
-### Problem
+### 課題
 
-You want to post raw text data to a flow.
+生のテキストデータをフローにPOSTしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">HTTP In</code> node to listen for POST requests that
-have their `Content-Type` set to `text/plain` and access the posted data as `msg.payload`.
+<code class="node">HTTP In</code> ノードを使用して
+`Content-Type` に `text/plain` を持ったPOSTリクエストを待ち受けます。
+そして、`msg.payload` としてPOSTされたデータにアクセスします。
 
-#### Example
+#### 例
 
 ![](/images/http/post-raw-data-to-a-flow.png)
 
@@ -38,10 +39,11 @@ have their `Content-Type` set to `text/plain` and access the posted data as `msg
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-When the <code class="node">HTTP In</code> node receives a request with the `Content-Type`
-header set to `text/plain` it makes the body available as `msg.payload`:
+<code class="node">HTTP In</code> ノードは、
+`Content-Type` ヘッダに `text/plain` がセットされているリクエストを受け取ると、
+リクエストボディを `msg.payload` として利用できるようにします。
 
 ~~~javascript
 var name = msg.payload;
