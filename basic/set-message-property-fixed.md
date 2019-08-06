@@ -17,7 +17,7 @@ slug:
 
 #### 例
 
-![](/images/basic/copy-message-property.png){:width="616px"}
+![](/images/basic/set-message-property-fixed.png){:width="616px"}
 
 {% raw %}
 ~~~json
