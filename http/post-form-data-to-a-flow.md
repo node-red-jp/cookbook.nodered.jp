@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Post form data to a flow
+title: フローにフォームデータをPOST
 slug:
   - label: http
     url: /#http-endpoints
   - post form data
 ---
 
-### Problem
+### 課題
 
-You want to post form data to a flow.
+フォームのデータをフローにPOSTしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">HTTP In</code> node to listen for POST requests that
-have their `Content-Type` set to `application/x-www-form-urlencoded` and access
-the form data as properties of `msg.payload`.
+<code class="node">HTTP In</code> ノードを使用して
+`Content-Type` に `application/x-www-form-urlencoded` を持ったPOSTリクエストを待ち受けます。
+そして、`msg.payload` のプロパティとしてフォームのデータにアクセスします。
 
-#### Example
+#### 例
 
 ![](/images/http/post-form-data-to-a-flow.png)
 
@@ -39,13 +39,13 @@ the form data as properties of `msg.payload`.
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-HTML Forms can be used to send data from the browser back to a server. If
-configured to `POST` the data, the browser will encode the data held in the
-`<form>` using a `content-type` of `application/x-www-form-urlencoded`.
+HTMLのフォームはブラウザのデータをサーバーに送信するよう使用されます。
+もしデータが `POST` するよう設定されている場合、
+ブラウザは `<form>` が保持するデータを `application/x-www-form-urlencoded` という `content-type` となるようエンコードします。
 
-For example, when a form that looks like this is submitted:
+たとえば、次のようなフォームが送信されたとします。
 
 ~~~html
 <form action="http://localhost:1880/hello-form" method="post">
@@ -54,7 +54,7 @@ For example, when a form that looks like this is submitted:
 </form>
 ~~~
 
-it results in the request:
+この場合のリクエストは次のようになります。
 
 ~~~text
 POST / HTTP/1.1
@@ -65,9 +65,8 @@ Content-Length: 9
 name=Nick
 ~~~
 
-When the <code class="node">HTTP In</code> node receives such a request, it
-parses the body of the request and makes the form data available under
-`msg.payload`:
+<code class="node">HTTP In</code> ノードはこのようなリクエストを受けると、
+リクエストボディを変換し、フォームのデータを `msg.payload` を通じて利用できるようにします。
 
 ~~~javascript
 var name = msg.payload.name;
