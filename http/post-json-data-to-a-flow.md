@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Post JSON data to a flow
+title: フローにJSONをPOST
 slug:
   - label: http
     url: /#http-endpoints
   - post json
 ---
 
-### Problem
+### 課題
 
-You want to post JSON data to a flow.
+フローにJSONをPOSTしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">HTTP In</code> node to listen for POST requests that
-have their `Content-Type` set to `application/json` and access the parsed JSON as
-properties of `msg.payload`.
+<code class="node">HTTP In</code> ノードを使用して
+`Content-Type` に `application/json` を持ったPOSTリクエストを待ち受けます。
+そして、`msg.payload` のプロパティとして変換されたJSONにアクセスします。
 
-#### Example
+#### 例
 
 ![](/images/http/post-form-data-to-a-flow.png)
 
@@ -39,11 +39,11 @@ properties of `msg.payload`.
 ~~~
 {: .shell}
 
-### Discussion
+### 議論
 
-When the <code class="node">HTTP In</code> node receives a request with the `Content-Type`
-header set to `application/json` it parses the body of the request and makes the data
-available under `msg.payload`:
+<code class="node">HTTP In</code> ノードは、
+`Content-Type` ヘッダに `application/json` がセットされているリクエストを受け取ると、
+リクエストボディを変換し、データを `msg.payload` を通じて利用できるようにします。
 
 ~~~javascript
 var name = msg.payload.name;
