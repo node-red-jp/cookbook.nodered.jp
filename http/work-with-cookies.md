@@ -1,25 +1,25 @@
 ---
 layout: default
-title: Work with cookies
+title: Cookieを使用
 slug:
   - label: http
     url: /#http-endpoints
   - cookies
 ---
 
-### Problem
+### 課題
 
-You want to create an HTTP flow that uses cookies.
+Cookieを使うHTTPフローを作成したい。
 
-### Solution
+### 解決
 
-The messages sent by the <code class="node">HTTP In</code> node include the
-`msg.req.cookies` property that lists the cookies set on the current request.
+<code class="node">HTTP In</code> ノードに送信されたメッセージは
+`msg.req.cookies` プロパティを含んでおり、これが送信されたリクエストのCookieのリストになっています。
 
-The <code class="node">HTTP Response</code> node will use the `msg.cookies` property
-in order to set or clear cookies.
+<code class="node">HTTP Response</code> ノードは
+Cookieをセットやクリアするために `msg.cookies` を使用します。
 
-#### Example
+#### 例
 
 ![](/images/http/work-with-cookies.png)
 
@@ -30,28 +30,30 @@ in order to set or clear cookies.
 {: .flow}
 {% endraw %}
 
-This example provides three HTTP endpoints:
+この例では次の3つのエンドポイントを提供しています。
 
- - `/hello-cookie` returns a page that lists the cookies currently set
- - `/hello-cookie/add` adds a new cookie and redirects back to `/hello-cookie`
- - `/hello-cookie/clear` clears all cookies created by the example and redirects back to `/hello-cookie`
+ - `/hello-cookie` は、現在セットされているCookie一覧のページを返します。
+ - `/hello-cookie/add` は、新しいCookieを追加し、`/hello-cookie` へリダイレクトします。
+ - `/hello-cookie/clear` は、サンプルとして作られたすべてのCookieをクリアしし、`/hello-cookie` へリダイレクトします。
 
-### Discussion
+### 議論
 
-The `msg.req.cookies` property is an object of key/value pairs containing the cookies
-set on the current request.
+`msg.req.cookies` プロパティは、現在のリクエストのCookieセットを含んだ
+キーと値のペアで構成されたオブジェクトです。
 
 ~~~javascript
 var mySessionId = msg.req.cookies['sessionId'];
 ~~~
 
-In order to set a cookie in the response, the `msg.cookies` property should be set
-to a similar key/value object.
+レスポンスでCookieをセットするためには、キーと値のオブジェクトのような形で
+`msg.cookies` プロパティにセットされていなければなりません。
 
-The value can be either a string to set the value of the cookie with default
-options, or it can be an object of options.
+値は、デフォルトとして文字列を設定することもできますし、
+オプションでオブジェクトにすることもできます。
 
-The following example sets two cookies - one called `name` with a value of `Nick`, the other called `session` with a value of `1234` and an expiry set to 15 minutes.
+次の例は2つのCookieをセットしています。
+ひとつは `name` をキーとして、値が `Nick` です。
+もうひとつは `session` をキーとして、値が `1234` であり、15分で有効期限が切れます。
 
 ~~~javascript
 msg.cookies = {
@@ -63,12 +65,12 @@ msg.cookies = {
 }
 ~~~
 
-The valid options include:
+オプションは次のとおりです:
 
-- `domain` - (String) domain name for the cookie
-- `expires` - (Date) expiry date in GMT. If not specified or set to 0, creates a session cookie
-- `maxAge` - (String) expiry date as relative to the current time in milliseconds
-- `path` - (String) path for the cookie. Defaults to /
-- `value` - (String) the value to use for the cookie
+- `domain` - (String) Cookieのドメイン名。
+- `expires` - (Date) GMTでの有効期限。設定されていない場合や0が設定されている場合は、セッションCookieとなります。
+- `maxAge` - (String) Cookieを発行した時点からミリ秒で相対的に指定する有効期限。
+- `path` - (String) Cookieのパス。デフォルトは / です。
+- `value` - (String) Cookieに登録される値。
 
-To delete a cookie, set its value to null.
+Cookieを削除するには、そのキーの値にnullをセットします。

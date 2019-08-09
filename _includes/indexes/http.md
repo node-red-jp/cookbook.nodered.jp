@@ -10,7 +10,7 @@
 - [フローに生データをPOST](/http/post-raw-data-to-a-flow)
 - [フローにフォームデータをPOST](/http/post-form-data-to-a-flow)
 - [フローにJSONをPOST](/http/post-json-data-to-a-flow)
-- [Work with cookies](/http/work-with-cookies)
+- [Cookieを使用](/http/work-with-cookies)
 
 #### HTTP requests
 - [シンプルなGETリクエスト](/http/simple-get-request)
