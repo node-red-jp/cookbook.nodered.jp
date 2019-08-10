@@ -15,7 +15,7 @@
 #### HTTP requests
 
 - [シンプルなGETリクエスト](/http/simple-get-request)
-- [Set the url of a request](/http/set-request-url)
+- [リクエスト先URLをセット](/http/set-request-url)
 - [Set the url of a request using a template](/http/set-request-url-template)
 - [Set query string parameters](/http/set-query-string)
 - [Get a parsed JSON response](/http/parse-json-response)

@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Set the URL of a request
+title: リクエスト先URLをセット
 slug:
   - label: http
     url: /#http-requests
   - set url
 ---
 
-### Problem
+### 課題
 
-You want to set the URL of an HTTP request node dynamically.
+HTTPリクエストノードのURLを動的に設定したい。
 
-### Solution
+### 解決
 
-Set the URL property of the <code class="node">HTTP Request</code> node.
+<code class="node">HTTP Request</code> ノードのURLプロパティをセットします。
 
-#### Example
+#### 例
 
 ![](/images/http/set-request-url.png)
 
@@ -26,7 +26,9 @@ Set the URL property of the <code class="node">HTTP Request</code> node.
 {: .flow}
 {% endraw %}
 
-The <code class="node">Inject</code> node generates a string URL, and the <code class="node">Change</code> node sets the msg.URL property.  In this flow the URL is set to:
+<code class="node">Inject</code> ノードでURLとなる文字列を生成し、
+<code class="node">Change</code> ノードで `msg.URL` プロパティにセットしています。
+このフローではURLは次のようにセットされます:
 
 {% raw %}
 ~~~text
@@ -34,7 +36,8 @@ http://vancouver.craigslist.org/search/sss?format=rss&query=cars
 ~~~
 {% endraw %}
 
-To return an RSS feed for cars for sale in Vancouver on Craigslist.  It returns something like the following XML content in the debug window:
+Craigslistというサイトの、バンクーバーで売りに出されている車の情報をRSSで返します。
+次のようなXMLの内容がデバッグウィンドウに表示されます:
 
 {% raw %}
 ~~~text
@@ -65,6 +68,8 @@ To return an RSS feed for cars for sale in Vancouver on Craigslist.  It returns 
 ~~~
 {% endraw %}
 
-#### Discussion
+#### 議論
 
-An <code class="node">XML</code> node can be added after the <code class="node">HTTP Request</code> to change the XML RSS content returned to a JavaScript object for easy access to the data.
+RSSの内容をXMLに変換するために、<code class="node">HTTP Request</code> の後に
+<code class="node">XML</code> も追加できます。
+RSSの内容はアクセスしやすいようにJavaScriptオブジェクトで返されます。
