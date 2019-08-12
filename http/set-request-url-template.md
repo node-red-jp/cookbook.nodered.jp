@@ -1,21 +1,22 @@
 ---
 layout: default
-title: Set the URL of a request using a template
+title: リクエスト先URLにテンプレートを使用
 slug:
   - label: http
     url: /#http-requests
   - set url
 ---
 
-### Problem
+### 課題
 
-You want to dynamically set the URL of an HTTP request where only parts of the url change between requests.
+リクエストによってURLの一部のみが変更になるような、HTTPリクエストのURLを動的に設定したい。
 
-### Solution
+### 課題
 
-Configure the <code class="node">HTTP Request</code> node to generate a URL dynamically using a [mustache](http://mustache.github.io/mustache.5.html) URL template.
+[mustache](http://mustache.github.io/mustache.5.html) URLテンプレートを使用して
+URLを動的に設定するよう <code class="node">HTTP Request</code> ノードを設定します。
 
-#### Example
+#### 例
 
 ![](/images/http/set-request-url-template.png)
 
@@ -47,6 +48,7 @@ The JSON output from this API in the debug panel will look as follows:
 ~~~
 {% endraw %}
 
-#### Discussion
+#### 議論
 
-By default, mustache will escape any HTML entities in the values it substitutes. To ensure HTML escaping is not used in your URL use `{% raw %}{{{triple}}}{% endraw %}` braces.
+デフォルトでは、mustacheは値の中のHTMLエンティティをエスケープします。
+URLエスケープが効かないようにするには `{% raw %}{{{triple}}}{% endraw %}` のように中括弧を使います。
