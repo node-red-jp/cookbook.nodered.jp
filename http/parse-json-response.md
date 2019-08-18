@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Get a parsed JSON Response
+title: レスポンスをJSONにパース
 slug:
   - label: http
     url: /#http-requests
   - parse json
 ---
 
-### Problem
+### 課題
 
-You want to return the JSON response of an HTTP request as a parsed Javascript object.
+HTTPリクエストに対して、パースされたJavaScriptオブジェクトとしてのJSONレスポンスを返したい。
 
-### Solution
+### 解決
 
-The <code class="node">HTTP Request</code> node will return a the body of a JSON response in the `msg.payload` as a string by default.
-Change the `Return` configuration of this node to `a parsed JSON object` to parse the JSON response in the `msg.payload` that
-can be easily accessed by downstream nodes.
+<code class="node">HTTP Request</code> ノードはデフォルトで、`msg.payload`に文字列としてJSONレスポンスを返します。
+このノードの `出力形式` 設定を `JSON オブジェクト` に変更して、
+後続のノードがアクセスしやすいよう `msg.payload` をJSONのレスポンスにします。
 
-#### Example
+#### 例
 
 ![](/images/http/parse-json-response.png)
 
@@ -28,9 +28,9 @@ can be easily accessed by downstream nodes.
 {: .flow}
 {% endraw %}
 
-We have reconfigured the flow from the [Set the URL of a Request URL recipe](set-request-url.html)
-by changing the <code class="node">HTTP Request</code> node configuration.  The <code class="node">Debug</code>
-node has been modified to display only the `title` property of the parsed JSON response:
+上記の例は[リクエスト先URLをセットするレシピ](set-request-url.html)から
+<code class="node">HTTP Request</code> ノードの設定を変更したものです。
+<code class="node">Debug</code> ノードも、JSONレスポンスの `title` プロパティだけを表示するよう変更されています。
 
 {% raw %}
 ~~~text
@@ -38,6 +38,6 @@ node has been modified to display only the `title` property of the parsed JSON r
 ~~~
 {% endraw %}
 
-### Discussion
+### 議論
 
-If your HTTP request returns XML, the <code class="node">XML</code> node can be used to parse Javascript objects from XML documents.
+XMLでレスポンスがほしい場合は、<code class="node">XML</code> ノードを使用して、JSONからXMLに変換します。

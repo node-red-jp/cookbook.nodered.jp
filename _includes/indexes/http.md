@@ -18,6 +18,6 @@
 - [リクエスト先URLをセット](/http/set-request-url)
 - [リクエスト先URLにテンプレートを使用](/http/set-request-url-template)
 - [Set query string parameters](/http/set-query-string)
-- [Get a parsed JSON response](/http/parse-json-response)
+- [レスポンスをJSONにパース](/http/parse-json-response)
 - [Get a binary response](/http/get-binary-response)
 - [Set a request header](/http/set-request-header)
