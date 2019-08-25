@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Get binary response
+title: バイナリレスポンスを得る
 slug:
   - label: http
     url: /#http-requests
   - binary
 ---
 
-### Problem
+### 課題
 
-You want to get a binary HTTP response from an HTTP request.
+HTTPリクエストからバイナリのHTTPレスポンスを得たい。
 
-### Solution
+### 解決
 
-The <code class="node">HTTP Request</code> node will return the body of a response in the `msg.payload` as a string by default.
-Change the `Return` configuration of this node to `a binary buffer` to return the response as a binary buffer in the `msg.payload`.
+<code class="node">HTTP Request</code> ノードのデフォルトの動作は、レスポンスボディを文字列として `msg.payload` で返します。
+ノードの設定の `出力形式` を `バイナリバッファ` に変更して、バイナリバッファとして `msg.payload` を返すようにします。
 
-#### Example
+#### 例
 
 ![](/images/http/get-binary-response.png){:width="556px"}
 
@@ -27,9 +27,9 @@ Change the `Return` configuration of this node to `a binary buffer` to return th
 {: .flow}
 {% endraw %}
 
-We have modified the flow from the [Set the URL of a Request URL recipe](set-request-url.html) by changing the
-<code class="node">HTTP Request</code> node `Return` configuration to `a binary buffer`.  The <code class="node">Debug</code> node
-will display the payload as a binary buffer such as:
+上記の例は[リクエスト先URLをセットするレシピ](set-request-url.html)から
+<code class="node">HTTP Request</code> ノードの `出力形式` 設定を `バイナリバッファ` に変更したものです。
+<code class="node">Debug</code> ノードも、下記のようにpayloadをバイナリバッファで表示します:
 
 {% raw %}
 ~~~text

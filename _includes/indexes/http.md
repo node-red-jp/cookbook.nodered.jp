@@ -19,5 +19,5 @@
 - [リクエスト先URLにテンプレートを使用](/http/set-request-url-template)
 - [Set query string parameters](/http/set-query-string)
 - [レスポンスをJSONにパース](/http/parse-json-response)
-- [Get a binary response](/http/get-binary-response)
+- [バイナリレスポンスを得る](/http/get-binary-response)
 - [Set a request header](/http/set-request-header)
