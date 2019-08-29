@@ -20,4 +20,4 @@
 - [Set query string parameters](/http/set-query-string)
 - [レスポンスをJSONにパース](/http/parse-json-response)
 - [バイナリレスポンスを得る](/http/get-binary-response)
-- [Set a request header](/http/set-request-header)
+- [リクエストヘッダをセット](/http/set-request-header)

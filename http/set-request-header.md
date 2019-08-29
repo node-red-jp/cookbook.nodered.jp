@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Set a request header
+title: リクエストヘッダをセット
 slug:
   - label: http
     url: /#http-requests
   - set header
 ---
 
-### Problem
+### 課題
 
-You need to send an HTTP request with specific request headers.
+HTTPリクエストのヘッダを指定したい。
 
-### Solution
+### 解決
 
-Set the `msg.headers` field to the field value pairs of the request headers you would like to include in the
-message sent to the <code class="node">HTTP request</code> node.
+リクエストヘッダに含めたい内容を `msg.headers` フィールドにセットして
+<code class="node">HTTP request</code> ノードで送信します。
 
-#### Example
+#### 例
 
 ![](/images/http/set-request-header.png)
 
@@ -27,11 +27,12 @@ message sent to the <code class="node">HTTP request</code> node.
 {: .flow}
 {% endraw %}
 
-In this example we set the `X-Auth-User` and `X-Auth-Key` request headers to call a
-private HTTP input node on the FRED Node-RED cloud service.
+この例では、FREDというNode-REDのクラウドサービス内のプライベートなHTTP inputノードを呼び出す際に
+リクエストヘッダに `X-Auth-User` と `X-Auth-Key` をセットしています。
 
-The code in the <code class="node">Function</code> node below adds these additional message
-fields by adding a `msg.headers` object, and setting the header field/values in this object as shown.
+次に示す <code class="node">Function</code> ノードのコードでは、
+`msg.headers` オブジェクトに追加のメッセージフィールドを追加し、
+その中にリクエストヘッダのフィールドと値をセットしています。
 
 {% raw %}
 ~~~text
