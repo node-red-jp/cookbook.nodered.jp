@@ -27,7 +27,9 @@ URLを動的に設定するよう <code class="node">HTTP Request</code> ノー�
 {: .flow}
 {% endraw %}
 
-In this flow, the <code class="node">Inject</code> node sends an id for a post we would like to request from an API.  The <code class="node">Change</code> node changes this to `msg.post`.  The <code class="node">HTTP Request</code> node generates a URL by substituting `msg.post` of the URL property configured as shown:
+このフローでは <code class="node">Inject</code> ノードがリクエストするAPIに送信するpostのidを送ります。
+<code class="node">Change</code> ノードはこれを `msg.post` に代入します。
+<code class="node">HTTP Request</code> ノードは、次に示すように設定されたURLプロパティを `msg.post` で置換することにより送信先のURLを生成します。
 
 {% raw %}
 ~~~text
