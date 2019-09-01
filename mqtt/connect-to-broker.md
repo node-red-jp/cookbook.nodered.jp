@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Connect to an MQTT Broker
+title: MQTTブローカーに接続
 slug:
   - label: mqtt
     url: /#mqtt
   - connect
 ---
 
-### Problem
+### 課題
 
-You want to connect to an MQTT broker running locally.
+ローカルで実行されているMQTTブローカーに接続したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">MQTT Input</code> input or <code class="node">MQTT Output</code> node
-and an associated <code class="node">MQTT Config</code> node to connect to an MQTT broker.
+<code class="node">MQTT Input</code> または <code class="node">MQTT Output</code> ノードを使用し、
+関連付けた <code class="node">MQTT Config</code> ノードでMQTTブローカーに接続します。
 
 #### Example
 
@@ -27,14 +27,14 @@ and an associated <code class="node">MQTT Config</code> node to connect to an MQ
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-Many users will run an MQTT broker such as [mosquitto](http://mosquitto.org) on
-the same Raspberry Pi or PC that Node-RED is running on.  Once you have an
-<code class="node">MQTT</code> input or output node in your flow, you create an
-<code class="node">MQTT Config</code> node by clicking on the `Server` configuration
- pop-up and selecting `Add an MQTT broker...`.  Assuming your broker is open,
- set the server host to `localhost` and leave the port set to `1883`.
+多くのユーザが、[mosquitto](http://mosquitto.org) のように
+同一のRaspberry PiやPC上でMQTTブローカーを動かしています。
+<code class="node">MQTT</code> の入力や出力のノードがフロー上にあれば、
+`新規に mqtt-broker を追加...` を選択して、`サーバ` 設定ポップアップをクリックして
+<code class="node">MQTT Config</code> ノードが作成できます。
+ブローカーがオープンになっているとすれば、サーバに `localhost` を設定し、ポートには `1883` が入力されたままにします。
 
-To connect to non-local, secured brokers, other <code class="node">MQTT Config</code>
-node options will need to be set according to your broker's connectivity requirements.
+ローカルでないセキュアなブローカーへ接続を行う場合は、
+接続先のMQTT接続要件を満たしている他の設定が <code class="node">MQTT Config</code> ノードに必要です。
