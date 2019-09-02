@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Publish messages to a topic
+title: topicにメッセージをpublishする
 slug:
   - label: mqtt
     url: /#mqtt
   - publish
 ---
 
-### Problem
+### 課題
 
-You want to publish a message to an MQTT topic on a broker.
+MQTTブローカーのtopicにメッセージをpublishしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">MQTT Output</code> node to publish messages to a topic.
+<code class="node">MQTT Output</code> ノードを使用してtopicにメッセージをpublishする。
 
-#### Example
+#### 例
 
 ![](/images/mqtt/publish-to-topic.png)
 
@@ -26,6 +26,7 @@ Use the <code class="node">MQTT Output</code> node to publish messages to a topi
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">MQTT Output</code> node with an associated <code class="node">MQTT Config</code> node connected to an MQTT broker can be used to publish messages to a pre-configured topic.
+MQTTブローカーに接続済の <code class="node">MQTT Config</code> ノードが関連付けられている <code class="node">MQTT Output</code> ノードが、
+あらかじめ設定されたtopicにメッセージをpublishします。

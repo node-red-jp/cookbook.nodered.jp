@@ -1,7 +1,7 @@
 #### MQTT
 
 - [MQTTブローカーに接続](/mqtt/connect-to-broker)
-- [Publish messages to a topic](/mqtt/publish-to-topic)
+- [topicにメッセージをpublishする](/mqtt/publish-to-topic)
 - [Set the topic of a published message](/mqtt/set-publish-topic)
 - [Publish a retained message to a topic](/mqtt/publish-retained-message)
 - [Subscribe to a topic](/mqtt/subscribe-to-topic)
