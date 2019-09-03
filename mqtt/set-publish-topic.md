@@ -1,21 +1,22 @@
 ---
 layout: default
-title: Set the topic of a published message
+title: publishされるメッセージのtopicを設定
 slug:
   - label: mqtt
     url: /#mqtt
   - publish topic
 ---
 
-### Problem
+### 課題
 
-You want to set the topic of a published MQTT message dynamically.
+publishされるMQTTメッセージのtopicを動的に設定したい。
 
-### Solution
+### 解決
 
-Set the `topic` message property, before sending the message to an <code class="node">MQTT Output</code> node.
+<code class="node">MQTT Output</code> ノードでメッセージを送信する前に、
+<code class="node">Inject</code> ノードで `トピック` プロパティを設定しておきます。
 
-#### Example
+#### 例
 
 ![](/images/mqtt/set-publish-topic.png)
 
@@ -26,6 +27,7 @@ Set the `topic` message property, before sending the message to an <code class="
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-Ensure the `Topic` field in the <code class="node">MQTT Output</code> configuration dialog is left blank to use the `topic` message property.
+<code class="node">MQTT Output</code> ノードの設定ダイアログの、
+`トピック` フィールドが空のままになっていることを確認します。
