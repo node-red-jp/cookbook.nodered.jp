@@ -1,23 +1,22 @@
 ---
 layout: default
-title: Publish a retained message to a topic
+title: retainされたメッセージをtopicにpublish
 slug:
   - label: mqtt
     url: /#mqtt
   - retained
 ---
 
-### Problem
+### 課題
 
-You want to publish a retained message to an MQTT topic on a broker.
+retainされたメッセージをブローカーのMQTTのtopicにpublishしたい。
 
-### Solution
+### 解決
 
-Set the `Retain` option to `true` in the <code class="node">MQTT Output</code> node
-configuration dialog, or set the `msg.retain` message property to `true` in the
-message sent to the node.
+<code class="node">MQTT Output</code> ノードの設定ダイアログで、`保持` オプションを `する` にセットするか、
+ノードに送信されるメッセージ内の `msg.retain` プロパティを `true` にセットします。
 
-#### Example
+#### 例
 
 ![](/images/mqtt/publish-retained-message.png)
 
@@ -28,10 +27,10 @@ message sent to the node.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-Once you have sent a retained message to a topic, all subscribers will receive
-that message when they subscribe.
+retainされたメッセージをtopicに送信すると、
+すべてのsubscriberはsubscribe時にメッセージを受け取ることになります。
 
-To clear a previously retained topic from the broker, send a blank message to
-that topic with the retain flag set.
+ブローカーにある直前にretainされたtopicをクリアするには、
+retainフラグがセットされているブランクのメッセージをそのtopicに送信します。
