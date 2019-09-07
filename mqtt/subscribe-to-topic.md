@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Subscribe to a topic
+title: topicをsubscribe
 slug:
   - label: mqtt
     url: /#mqtt
   - subscribe
 ---
 
-### Problem
+### 課題
 
-You want to subscribe to messages on an MQTT topic.
+MQTTのtopicをsubscribeしたい。
 
-### Solution
+### 解決
 
-Use the <code class="node">MQTT Input</code> node to subscribe to the broker and
-receive messages published to matching topics.
+<code class="node">MQTT Input</code> ノードを使用しブローカーをsubscribeし、
+topicに一致するメッセージを受信します。
 
-#### Example
+#### 例
 
 ![](/images/mqtt/subscribe-to-topic.png)
 
@@ -27,16 +27,17 @@ receive messages published to matching topics.
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The <code class="node">MQTT Input</code> node must be hardcoded with the topic filter
-to use - it cannot be changed dynamically.
+<code class="node">MQTT Input</code> ノードのtopicのフィルターはハードコードしなければならず、
+動的には変更できません。
 
-One possible workaround is to set the topic to an environment variable such as
-`$(MY_TOPIC)`. When the Node-RED runtime starts it will substitute the environment
-variable value into that property of the node. This does allow the topic to be changed, although
-doing so does require a restart of Node-RED to pickup changes to the environment variable.
 
-You can also use MQTT wildcards, `+` for a single topic level or `#` for multiple. This allows
-you to receive multiple topics with a single node. The messages will be sent from
-the node with `msg.topic` set to the actual topic received.
+これを回避する方法のひとつは、`$(MY_TOPIC)` のような環境変数をtopicにセットすることです。
+Node-REDのランタイムが開始したとき、ノードのプロパティがその環境変数に置換されます。
+これによりtopicの変更ができますが、
+環境変数の変化を反映するにはNode-REDの再起動が必要です。
+
+MQTTワイルドカードを、`+` は単一のtopicレベルに、`#` は複数のtopicレベルに使用できます。
+これにより、単一のノードで複数のtopicを受信できます。
+ノードから送信されたメッセージの `msg.topic` には、実際に受信したtopicがセットされています。
