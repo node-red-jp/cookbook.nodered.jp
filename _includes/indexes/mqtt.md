@@ -5,4 +5,4 @@
 - [publishされるメッセージのtopicを設定](/mqtt/set-publish-topic)
 - [retainされたメッセージをtopicにpublish](/mqtt/publish-retained-message)
 - [topicをsubscribe](/mqtt/subscribe-to-topic)
-- [Receive a parsed JSON message](/mqtt/receive-json)
+- [パースされたJSONメッセージを受信](/mqtt/receive-json)

@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Receive a parsed JSON message
+title: パースされたJSONメッセージを受信
 slug:
   - label: mqtt
     url: /#mqtt
   - subscribe json
 ---
 
-### Problem
+### 課題
 
-You want to receive a parsed JSON message from an MQTT broker.
+MQTT BrokerからパースされたJSONメッセージを受信したい。
 
-### Solution
+### 解決
 
-Use the <code class="node">MQTT Input</code> node and a <code class="node">JSON node</code> to receive a parsed JSON message.
+<code class="node">MQTT Input</code> ノードと <code class="node">JSON node</code> ノードを使用して、パースされたJSONメッセージを受信します。
 
-#### Example
+#### 例
 
 ![](/images/mqtt/receive-json.png)
 
@@ -26,8 +26,9 @@ Use the <code class="node">MQTT Input</code> node and a <code class="node">JSON 
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
-The payload of an <code class="node">MQTT Input</code> node is a string unless it was detected as a binary buffer.  To parse the JSON string and convert it to a JavaScript Object, use the <code class="node">JSON</code> node.
+<code class="node">MQTT Input</code> ノードのpayloadは、バイナリバッファとして検出されなければ文字列となります。JSON文字列にパースしてJavaScript Objectに変換するには、<code class="node">JSON</code> ノードを使用します。
 
-Newer versions of the MQTT node (Node-RED version 0.19+) now have a select option to choose the required output format so the JSON node may no longer be required.
+新しいバージョンのMQTT node(Node-REDバージョン0.19以降)は、
+出力オプションが必須指定で存在するため、JSONノードは必須ではありません。
