@@ -13,7 +13,7 @@ slug:
 
     http://example.com/hello-query?name=Nick
 
-### 課題
+### 解決
 
 <code class="node">HTTP In</code> ノードに送信されたメッセージの `msg.req.query` プロパティを使用して、
 パラメータにアクセスします。
