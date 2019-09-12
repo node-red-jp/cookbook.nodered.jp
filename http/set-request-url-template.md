@@ -50,7 +50,7 @@ The JSON output from this API in the debug panel will look as follows:
 ~~~
 {% endraw %}
 
-#### 議論
+### 議論
 
 デフォルトでは、mustacheは値の中のHTMLエンティティをエスケープします。
 URLエスケープが効かないようにするには `{% raw %}{{{triple}}}{% endraw %}` のように中括弧を使います。

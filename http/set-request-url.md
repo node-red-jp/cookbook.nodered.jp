@@ -68,7 +68,7 @@ Craigslistというサイトの、バンクーバーで売りに出されてい�
 ~~~
 {% endraw %}
 
-#### 議論
+### 議論
 
 RSSの内容をXMLに変換するために、<code class="node">HTTP Request</code> の後に
 <code class="node">XML</code> も追加できます。
