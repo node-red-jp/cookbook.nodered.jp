@@ -13,8 +13,7 @@ publishされるMQTTメッセージのtopicを動的に設定したい。
 
 ### 解決
 
-<code class="node">MQTT Output</code> ノードでメッセージを送信する前に、
-<code class="node">Inject</code> ノードで `トピック` プロパティを設定しておきます。
+<code class="node">MQTT Output</code> ノードでメッセージを送信する前に、`トピック` プロパティを設定しておきます。
 
 #### 例
 
@@ -26,6 +25,9 @@ publishされるMQTTメッセージのtopicを動的に設定したい。
 ~~~
 {: .flow}
 {% endraw %}
+
+この例では、<code class="node">Inject</code> ノードが `msg.topic` をセットしていますが、
+必ずしもInjectノードを使用しなければならないわけではありません。
 
 ### 議論
 
