@@ -11,7 +11,7 @@ slug:
 
 リクエストによってURLの一部のみが変更になるような、HTTPリクエストのURLを動的に設定したい。
 
-### 課題
+### 解決
 
 [mustache](http://mustache.github.io/mustache.5.html) URLテンプレートを使用して
 URLを動的に設定するよう <code class="node">HTTP Request</code> ノードを設定します。

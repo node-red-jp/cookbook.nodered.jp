@@ -7,7 +7,7 @@ slug:
   - trigger on error
 ---
 
-### 問題
+### 課題
 
 ノードがエラーをthrowした場合にフローを実行したい。
 

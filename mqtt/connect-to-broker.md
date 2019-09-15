@@ -16,7 +16,7 @@ slug:
 <code class="node">MQTT Input</code> または <code class="node">MQTT Output</code> ノードを使用し、
 関連付けた <code class="node">MQTT Config</code> ノードでMQTTブローカーに接続します。
 
-#### Example
+#### 例
 
 ![](/images/mqtt/connect-to-broker.png)
 

@@ -27,7 +27,7 @@ slug:
 {: .flow}
 {% endraw %}
 
-### Discussion
+### 議論
 
 <code class="node">Inject</code> ノードは固定の間隔で繰り返すよう設定されています。
 必要に応じて、特定の日の特定の時間の範囲内で実行するよう制限することもできます。

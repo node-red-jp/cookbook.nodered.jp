@@ -16,7 +16,7 @@ slug:
 
 <code class="node">Range</code> ノードを使用して、定義した範囲にマッピングします。
 
-#### Example
+#### 例
 
 ![](/images/basic/map-between-different-number-ranges.png){:width="616px"}
 
