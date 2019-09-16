@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Node-RED Cookbook
+title: Node-RED クックブック
 ---
 
 どのようにNode-REDを使用して、よくあるプログラミング上の課題を解決するかのレシピ集です。
@@ -8,10 +8,10 @@ title: Node-RED Cookbook
 それぞれのレシピはそれぞれの特定の問題に対応しており、
 プラットフォームの機能を使用して、どのように解決するかの例を示しています。
 
-Cookbookへの貢献に興味がある方も大歓迎です。
+クックブックへの貢献に興味がある方も大歓迎です。
 [slack](https://nodered.jp/slack) の `#docs` チャンネルに参加して関係を深めましょう。
 
-## Table of Contents
+## 目次
 
 {% include indexes/basic.md %}
 

@@ -1,4 +1,4 @@
-#### HTTP endpoints
+#### HTTPエンドポイント
 
 - [HTTPエンドポイントを作成](/http/create-an-http-endpoint)
 - [HTTPエンドポイントに渡されたクエリパラメータのハンドル](/http/handle-query-parameters)
@@ -12,7 +12,7 @@
 - [フローにJSONをPOST](/http/post-json-data-to-a-flow)
 - [Cookieを使用](/http/work-with-cookies)
 
-#### HTTP requests
+#### HTTPリクエスト
 
 - [シンプルなGETリクエスト](/http/simple-get-request)
 - [リクエスト先URLをセット](/http/set-request-url)

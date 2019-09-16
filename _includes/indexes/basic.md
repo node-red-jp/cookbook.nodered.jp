@@ -1,11 +1,11 @@
-#### Messages
+#### メッセージ
 
 - [固定値をmessageプロパティにセット](/basic/set-message-property-fixed)
 - [messageプロパティを削除](/basic/delete-message-property)
 - [messsageプロパティの移動](/basic/move-message-property)
 - [異なる範囲の数値をマッピングする](/basic/map-between-different-number-ranges)
 
-#### Flow control
+#### フロー制御
 
 - [Node-RED起動の度にフローを実行](/basic/trigger-on-start)
 - [定期的にフローを実行](/basic/trigger-at-interval)
@@ -20,12 +20,12 @@
 - [値が変わっていないメッセージの削除](/basic/report-by-exception)
 - [複数のストリームメッセージから単一のメッセージへまとめる](/basic/join-streams)
 
-#### Error handling
+#### エラーハンドリング
 
 - [ノードがエラーをthrowした場合にフローを実行](/basic/trigger-on-error)
 - [エラー発生後に自動的にリトライ](/basic/retry-on-error)
 
-#### Working with data formats
+#### データ形式の取り扱い
 
 - [JSONの相互変換](/basic/convert-json)
 - [XMLの相互変換](/basic/convert-xml)

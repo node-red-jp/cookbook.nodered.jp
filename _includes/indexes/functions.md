@@ -1,3 +1,3 @@
-#### Function node
+#### functionノード
 
 - Create an HTTP Endpoint
