@@ -2,9 +2,9 @@
 layout: default
 title: HTTPリクエストヘッダへアクセス
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - headers
+  - ヘッダ
 ---
 
 ### 課題

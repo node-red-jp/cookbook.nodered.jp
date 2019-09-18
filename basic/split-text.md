@@ -2,9 +2,9 @@
 layout: default
 title: テキストを1行1メッセージに分割
 slug:
-  - label: formats
+  - label: フォーマット
     url: /#working-with-data-formats
-  - text
+  - テキスト
 ---
 
 ### 課題

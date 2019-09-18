@@ -2,9 +2,9 @@
 layout: default
 title: エラー発生後に自動的にリトライ
 slug:
-  - label: error handling
+  - label: エラーハンドリング
     url: /#error-handling
-  - retry
+  - リトライ
 ---
 
 ### 課題

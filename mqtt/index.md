@@ -1,6 +1,6 @@
 ---
 layout: index
-title: MQTT Recipes
+title: MQTTのレシピ
 ---
 
 {% include indexes/mqtt.md %}

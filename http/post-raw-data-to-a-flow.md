@@ -2,9 +2,9 @@
 layout: default
 title: フローに生データをPOST
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - post data
+  - データをPOST
 ---
 
 ### 課題

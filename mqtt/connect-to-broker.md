@@ -2,9 +2,9 @@
 layout: default
 title: MQTTブローカーに接続
 slug:
-  - label: mqtt
+  - label: MQTT
     url: /#mqtt
-  - connect
+  - 接続
 ---
 
 ### 課題

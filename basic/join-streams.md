@@ -2,9 +2,9 @@
 layout: default
 title: 複数のストリームメッセージから単一のメッセージへまとめる
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
-  - join streams
+  - ストリームをまとめる
 ---
 
 ### 課題

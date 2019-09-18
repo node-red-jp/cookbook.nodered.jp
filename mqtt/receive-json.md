@@ -2,9 +2,9 @@
 layout: default
 title: パースされたJSONメッセージを受信
 slug:
-  - label: mqtt
+  - label: MQTT
     url: /#mqtt
-  - subscribe json
+  - JSONをsubscribe
 ---
 
 ### 課題

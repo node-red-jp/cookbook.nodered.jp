@@ -2,9 +2,9 @@
 layout: default
 title: ストリームの送信が止まった際にプレースホルダーメッセージを送信
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
-  - trigger placeholder
+  - プレースホルダーの送信
 ---
 
 ### 課題

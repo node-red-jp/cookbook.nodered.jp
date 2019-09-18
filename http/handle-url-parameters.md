@@ -2,9 +2,9 @@
 layout: default
 title: HTTPエンドポイントのURLパラメータのハンドル
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - url parameters
+  - URLパラメータ
 ---
 
 ### 課題

@@ -2,9 +2,9 @@
 layout: default
 title: レスポンスをJSONにパース
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-requests
-  - parse json
+  - JSONにパース
 ---
 
 ### 課題

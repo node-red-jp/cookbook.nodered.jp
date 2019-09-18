@@ -2,9 +2,9 @@
 layout: default
 title: Cookieを使用
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - cookies
+  - Cookie
 ---
 
 ### 課題

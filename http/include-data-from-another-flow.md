@@ -2,9 +2,9 @@
 layout: default
 title: 他のフローで取得したデータの埋め込み
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - context
+  - コンテキスト
 ---
 
 ### 課題

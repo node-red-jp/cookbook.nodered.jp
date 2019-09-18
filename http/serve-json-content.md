@@ -2,9 +2,9 @@
 layout: default
 title: JSONを返す
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - serve json
+  - JSONを返す
 ---
 
 ### 課題

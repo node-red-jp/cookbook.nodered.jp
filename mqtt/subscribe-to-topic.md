@@ -2,7 +2,7 @@
 layout: default
 title: topicをsubscribe
 slug:
-  - label: mqtt
+  - label: MQTT
     url: /#mqtt
   - subscribe
 ---

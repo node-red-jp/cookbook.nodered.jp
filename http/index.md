@@ -1,6 +1,6 @@
 ---
 layout: index
-title: HTTP recipes
+title: HTTPのレシピ
 ---
 
 {% include indexes/http.md %}

@@ -2,9 +2,9 @@
 layout: default
 title: バイナリレスポンスを得る
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-requests
-  - binary
+  - バイナリ
 ---
 
 ### 課題

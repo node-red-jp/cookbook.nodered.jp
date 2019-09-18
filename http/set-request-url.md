@@ -2,9 +2,9 @@
 layout: default
 title: リクエスト先URLをセット
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-requests
-  - set url
+  - URLをセット
 ---
 
 ### 課題

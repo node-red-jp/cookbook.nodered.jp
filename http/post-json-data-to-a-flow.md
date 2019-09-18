@@ -2,9 +2,9 @@
 layout: default
 title: フローにJSONをPOST
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - post json
+  - JSONをPOST
 ---
 
 ### 課題

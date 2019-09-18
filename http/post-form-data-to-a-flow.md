@@ -2,9 +2,9 @@
 layout: default
 title: フローにフォームデータをPOST
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - post form data
+  - フォームデータをPOST
 ---
 
 ### 課題

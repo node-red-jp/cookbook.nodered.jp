@@ -2,9 +2,9 @@
 layout: default
 title: メッセージの通過を遅らせる
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
-  - rate limit
+  - メッセージの流量制限
 ---
 
 ### 課題

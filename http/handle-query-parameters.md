@@ -2,9 +2,9 @@
 layout: default
 title: HTTPエンドポイントに渡されたクエリパラメータのハンドル
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - query parameters
+  - クエリパラメータ
 ---
 
 ### 課題

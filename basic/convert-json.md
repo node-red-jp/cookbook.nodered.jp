@@ -2,9 +2,9 @@
 layout: default
 title: JSONの相互変換
 slug:
-  - label: formats
+  - label: フォーマット
     url: /#working-with-data-formats
-  - json
+  - JSON
 
 ---
 

@@ -2,9 +2,9 @@
 layout: default
 title: 定期的にフローを実行
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
-  - trigger at interval
+  - 定期実行
 ---
 
 ### 課題

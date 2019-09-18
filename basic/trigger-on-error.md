@@ -2,9 +2,9 @@
 layout: default
 title: ノードがエラーをthrowした場合にフローを実行
 slug:
-  - label: error handling
+  - label: エラーハンドリング
     url: /#error-handling
-  - trigger on error
+  - エラー時に実行
 ---
 
 ### 課題

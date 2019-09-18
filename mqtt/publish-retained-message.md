@@ -2,9 +2,9 @@
 layout: default
 title: retainされたメッセージをtopicにpublish
 slug:
-  - label: mqtt
+  - label: MQTT
     url: /#mqtt
-  - retained
+  - retain
 ---
 
 ### 課題

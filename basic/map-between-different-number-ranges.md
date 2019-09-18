@@ -2,9 +2,9 @@
 layout: default
 title: 異なる範囲の数値をマッピングする
 slug:
-  - label: messages
+  - label: メッセージ
     url: /#messages
-  - map range
+  - マッピング
 ---
 
 ### 課題

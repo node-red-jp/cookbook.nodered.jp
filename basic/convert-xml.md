@@ -2,9 +2,9 @@
 layout: default
 title: XMLの相互変換
 slug:
-  - label: formats
+  - label: フォーマット
     url: /#working-with-data-formats
-  - xml
+  - XML
 ---
 
 ### 課題

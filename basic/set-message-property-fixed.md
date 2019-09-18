@@ -2,9 +2,9 @@
 layout: default
 title: 固定値をmesssageプロパティにセット
 slug:
-  - label: messages
+  - label: メッセージ
     url: /#messages
-  - set property
+  - プロパティにセット
 ---
 
 ### 課題

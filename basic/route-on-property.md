@@ -2,9 +2,9 @@
 layout: default
 title: メッセージをプロパティによってルーティングする
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
-  - route on property
+  - プロパティによるルーティング
 ---
 
 ### 課題

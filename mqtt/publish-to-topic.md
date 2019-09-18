@@ -2,7 +2,7 @@
 layout: default
 title: topicにメッセージをpublishする
 slug:
-  - label: mqtt
+  - label: MQTT
     url: /#mqtt
   - publish
 ---

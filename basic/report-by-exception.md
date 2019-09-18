@@ -2,7 +2,7 @@
 layout: default
 title: 値が変わっていないメッセージの削除
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
   - rbe
 ---

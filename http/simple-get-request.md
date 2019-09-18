@@ -2,9 +2,9 @@
 layout: default
 title: シンプルなGETリクエスト
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-requests
-  - get
+  - GET
 ---
 
 ### 課題

@@ -2,9 +2,9 @@
 layout: default
 title: 配列内の各要素に対して操作を実行
 slug:
-  - label: flow control
+  - label: フロー制御
     url: /#flow-control
-  - operate on array
+  - 配列の操作
 ---
 
 ### 課題

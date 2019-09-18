@@ -2,9 +2,9 @@
 layout: default
 title: ローカルファイルを返す
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - serve file
+  - ファイルを返す
 ---
 
 ### 課題

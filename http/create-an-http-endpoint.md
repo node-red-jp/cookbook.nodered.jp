@@ -2,9 +2,9 @@
 layout: default
 title: HTTPエンドポイントを作成
 slug:
-  - label: http
+  - label: HTTP
     url: /#http-endpoints
-  - create endpoint
+  - エンドポイント作成
 ---
 
 ### 課題

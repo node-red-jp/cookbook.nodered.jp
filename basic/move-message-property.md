@@ -2,9 +2,9 @@
 layout: default
 title: messsageプロパティの移動
 slug:
-  - label: messages
+  - label: メッセージ
     url: /#messages
-  - move property
+  - プロパティの移動
 ---
 
 ### 課題

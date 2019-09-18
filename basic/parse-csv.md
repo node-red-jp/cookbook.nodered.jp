@@ -2,9 +2,9 @@
 layout: default
 title: CSV入力を変換
 slug:
-  - label: formats
+  - label: フォーマット
     url: /#working-with-data-formats
-  - csv
+  - CSV
 ---
 
 ### 課題
