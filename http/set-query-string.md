@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Set the query string parameters in a URL
+title: URLにクエリストリングパラメータを設定
 slug:
   - label: http
     url: /#http-requests
-  - set query string
+  - クエリストリングを設定
 ---
 
-### Problem
+### 課題
 
-You want to set the query string parameters of a URL for an HTTP request.
+HTTPリクエストに利用するURLのクエリストリングパラメータを設定したい場合。
 
-### Solution
+### 解決
 
-Use the <code class="node">HTTP Request</code> node's support for [mustache](http://mustache.github.io/mustache.5.html) to substitute query parameter strings in URLs directly.
+URLにクエリパラメータ文字列を直接代入するため、<code class="node">HTTP Request</code>ノードの[mustache](http://mustache.github.io/mustache.5.html)サポートを利用します。
 
-#### Example
+#### 例
 
 ![](/images/http/set-query-string.png)
 
@@ -26,7 +26,7 @@ Use the <code class="node">HTTP Request</code> node's support for [mustache](htt
 {: .flow}
 {% endraw %}
 
-The <code class="node">Inject</code> node generates a query string that is to be sent in the URL.  The <code class="node">Change</code> node changes this to `msg.query` which is substituted in the mustache template in the <code class="node">HTTP Request</code> node URL property configured as shown:
+<code class="node">Inject</code>ノードはURLとして送られるクエリストリングを生成します。<code class="node">Change</code>ノードはこれを、<code class="node">HTTP Request</code>ノードのURLプロパティに以下のようにmustacheテンプレートとして代入する`msg.query`に移動します:
 
 {% raw %}
 ~~~text
@@ -34,7 +34,7 @@ https://query.yahooapis.com/v1/public/yql?q={{{query}}}&format=json
 ~~~
 {% endraw %}
 
-The returned JSON content is the sunset in Hawaii:
+返却されたJSONコンテンツはハワイの日没時刻です:
 
 {% raw %}
 ~~~text
@@ -43,6 +43,6 @@ The returned JSON content is the sunset in Hawaii:
 {% endraw %}
 
 
-#### Discussion
+#### 議論
 
-By default, mustache will escape any HTML entities in the values it substitutes. To ensure HTML escaping is not used in your URL use `{% raw %}{{{triple}}}{% endraw %}` braces.
+デフォルトでは、mustacheは代入する値の中のHTMLエンティティをエスケープします。URL中にHTMLエスケープがおこなわれないゆおにするには、`{% raw %}{{{triple}}}{% endraw %}`のように3重の波括弧を利用します。
