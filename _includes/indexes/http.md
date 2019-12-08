@@ -17,7 +17,7 @@
 - [シンプルなGETリクエスト](/http/simple-get-request)
 - [リクエスト先URLをセット](/http/set-request-url)
 - [リクエスト先URLにテンプレートを使用](/http/set-request-url-template)
-- [Set query string parameters](/http/set-query-string)
+- [クエリストリングパラメータを設定](/http/set-query-string)
 - [レスポンスをJSONにパース](/http/parse-json-response)
 - [バイナリレスポンスを得る](/http/get-binary-response)
 - [リクエストヘッダをセット](/http/set-request-header)
